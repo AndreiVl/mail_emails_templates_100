@@ -1,0 +1,40 @@
+mixin IE(data)
+	- var table = '<!--[if (gte mso 9)|(IE)]><table aria-hidden="true" width="'+data.width+'" border="0" cellspacing="0" cellpadding="0"><tr><td align="'+data.align+'" valign="'+data.valign+'" ><![endif]-->'
+
+	- var col = '<!--[if (gte mso 9)|(IE)]><table aria-hidden="true" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+data.width_col+'" align="'+data.align+'" valign="'+data.valign+'" ><![endif]-->'
+
+	- var col_2 = '<!--[if (gte mso 9)|(IE)]><table aria-hidden="true" width="'+data.width+'" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+data.width_col+'" align="'+data.align+'" valign="'+data.valign+'" ><![endif]-->'
+
+	- var col_td = '<!--[if (gte mso 9)|(IE)]></td><td  width="'+data.width_col+'" align="'+data.align+'" valign="'+data.valign+'"><![endif]-->'
+
+	- var col_tr = '<!--[if (gte mso 9)|(IE)]></td></tr><tr><td width="'+data.width_col+'" align="'+data.align+'" valign="'+data.valign+'"><![endif]-->'
+
+	if data.col == 2
+		!=col
+	else if data.col == 3
+		!=col_2
+
+	else if data.col_td == 2
+		!=col_td
+
+	else if data.col_td == 3
+		!=col_tr
+	else
+		!=table
+
+//- вызов
+
+//- общая таблица 
+//- +IE({width: '', align: 'center', valign: 'top'})
+
+//- колонка
+//- +IE({col: 2, width_col: '', align: 'center', valign: 'top'})
+
+//- колонка c фиксированной длины главной таблицы
+//- +IE({col: 3, width: '', width_col: '', align: 'center', valign: 'top'})
+
+//- td колонок
+//- +IE({col_td: 2, width_col: '', align: 'center', valign: 'top'})
+
+//- перенос строки
+//- +IE({col_td: 3, width_col: '', align: 'center', valign: 'top'})

@@ -1,0 +1,46 @@
+mixin card-img(data)
+	<!-- CARD-IMG STARTS -->
+	table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #cccccc; border-radius: 5px;")
+		tr
+			td(align="center" style="padding: 30px;")
+				table(align="center" border="0" cellpadding="0" cellspacing="0" style="100%")
+					tr
+						td(align="center" style="line-height: 0px;" width=data.img_1_width)
+							+img({img_sm: data.img_1, alt: data.img_1_alt, width: data.img_1_width , height: data.img_1_height})
+					tr
+						+td-margin({height: data.img_1_margin})
+					tr
+						td(align="left" valign="top" width=data.img_2_width height=data.img_2_height style="line-height: " + data.img_2_height + "px; font-size: 0;")
+							+img({img_sm: data.img_2, alt: data.img_2_alt, width: data.img_2_width , height: data.img_2_height})
+					tr
+						+td-margin({height: data.img_2_margin})
+					tr
+						<!-- ID:TXT CARD-IMG CONTENT -->
+						td.text.text--sm(align=data.text_alignment)!=data.text
+					tr
+						+td-margin({height: data.text_margin})
+					tr
+						<!-- ID:TXT CARD-IMG TEXT-LINK -->
+						td.text.text--bold(align=data.link_alignment valign="middle")
+							a.link(href=data.link_url)!=data.link
+	<!-- CARD-IMG ENDS -->
+
+//- вызов 
+//- +card-img({
+//- 	img_1: '',
+//- 	img_1_alt: '',
+//- 	img_1_width: '',
+//- 	img_1_height: '',
+//- 	img_1_margin: '',
+//- 	img_2: '',
+//- 	img_2_alt: '',
+//- 	img_2_width: '',
+//- 	img_2_height: '',
+//- 	img_2_margin: '',
+//- 	text: '',
+//- 	text_alignment: '',
+//- 	text_margin: '',
+//- 	link: '',
+//- 	link_alignment: '',
+//- 	link_url: ''
+//- })

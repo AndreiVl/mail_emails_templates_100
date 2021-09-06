@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add browser-sync
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\ProgramData\chocolatey\bin;C:\WINDOWS\System32\OpenSSH\;C:\HashiCorp\Vagrant\bin;C:\xampp\php;C:\composer;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Andrey\AppData\Local\Microsoft\WindowsApps;C:\Users\Андрей\AppData\Local\Yarn\bin;C:\Users\Андрей\AppData\Roaming\npm;C:\Users\Andrey\AppData\Roaming\Composer\vendor\bin;C:\Users\Andrey\AppData\Local\Yarn\bin;C:\Users\Andrey\AppData\Roaming\npm
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: self signed certificate in certificate chain
+      at TLSSocket.onConnectSecure (_tls_wrap.js:1055:34)
+      at TLSSocket.emit (events.js:198:13)
+      at TLSSocket._finishInit (_tls_wrap.js:633:8)
+
+npm manifest: 
+  {
+    "name": "gulp4_0",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "gulp": "./node_modules/.bin/gulp"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "browser-sync": "^2.24.7",
+      "del": "^3.0.0",
+      "gulp-autoprefixer": "^6.0.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-flatten": "^0.4.0",
+      "gulp-html-minifier": "^0.1.8",
+      "gulp-inline-css": "^3.3.0",
+      "gulp-notify": "^3.2.0",
+      "gulp-plumber": "^1.2.0",
+      "gulp-pug": "^4.0.1",
+      "gulp-sass": "^4.0.1"
+    },
+    "devDependencies": {
+      "gulp": "^4.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

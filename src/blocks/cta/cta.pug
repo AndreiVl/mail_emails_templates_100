@@ -1,0 +1,37 @@
+mixin cta(data)
+	+row({
+		col: 1,
+		bg_body: bg_body_3,
+		body_pading_l: body_pading_l,
+		body_pading_r: body_pading_r,
+		body_width: body_width,
+		rtl: false,
+		margin_top: mr_mediumblue,
+		margin_bottom: mr_mediumblue,
+		content: {
+			name: 'text',
+			arg: [
+				{
+					type: 'text',
+					class: 'text text--black text--xl',
+					text: 'Surprise! for next week you can get <b>50</b>% off premium status',
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: mr_darkblue
+				},
+				{
+					type: 'content',
+					alignment: 'center',
+					name: 'btn',
+					arg: {
+						link: '#',
+						img: 'fashion-btn-209-48-04.jpg',
+						width: '209',
+						height: '48'
+					}
+				}
+			]
+		}
+	})

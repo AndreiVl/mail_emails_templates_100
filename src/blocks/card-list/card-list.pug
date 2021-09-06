@@ -1,0 +1,247 @@
+mixin card-list(data)
+	if data.cardList1
+		+row({
+			col: 2,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width,
+			rtl: false,
+			margin_top: false,
+			margin_top_class: false,
+			margin_bottom: false,
+			content: {
+				colWidth: td_2_col_width,
+				colPadding: '10px 10px',
+				valing_right: 'top',
+				valing_left: 'top',
+				col2_left: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-product-208-156-01.jpg',
+						cardItemImgAlt: 'Сумка Kern 709',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 156,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Сумка Kern 709',
+						text: '4 500 ₽'
+					}
+				},
+				col2_right: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-product-208-156-02.jpg',
+						cardItemImgAlt: 'Сумка Krusell Gaia',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 156,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Сумка Krusell Gaia',
+						text: '1 450 ₽'
+					}
+				}
+			}
+		})
+	if data.cardList2
+		+row({
+			col: 2,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width,
+			rtl: false,
+			margin_top: false,
+			margin_top_class: false,
+			margin_bottom: false,
+			content: {
+				colWidth: td_2_col_width,
+				colPadding: '10px 10px',
+				valing_right: 'top',
+				valing_left: 'top',
+				col2_left: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-product-208-156-03.jpg',
+						cardItemImgAlt: 'Набор подушек KI',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 156,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Набор подушек KI',
+						text: '2 350 ₽'
+					}
+				},
+				col2_right: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-product-208-156-04.jpg',
+						cardItemImgAlt: 'Умные часы LK2',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 156,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Умные часы LK2',
+						text: '5 000 ₽'
+					}
+				}
+			}
+		})
+	if data.cardList3
+		+row({
+			col: 3,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width_3,
+			rtl: false,
+			margin_bottom: mr_mediumblue,
+			content: {
+				colWidth: td_3_col_width,
+				colPadding: '10px 10px',
+				items: [
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'templates-100-product-132-103-01.jpg',
+							cardItemImgAlt: 'Умные часы LGt',
+							cardItemImgWidth: 132,
+							cardItemImgHeight: 103,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Умные часы LGt'
+						}
+					},
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'templates-100-product-132-103-02.jpg',
+							cardItemImgAlt: 'Набор подушек KI',
+							cardItemImgWidth: 132,
+							cardItemImgHeight: 103,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Набор подушек KI'
+						}
+					},
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'templates-100-product-132-103-03.jpg',
+							cardItemImgAlt: 'Сумка Krusell Gaia',
+							cardItemImgWidth: 132,
+							cardItemImgHeight: 103,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Сумка Krusell Gaia'
+						}
+					}
+				]
+			}
+		})
+	if data.cardList4
+		+row({
+			col: 2,
+			bg_body: bg_body_3,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width,
+			rtl: false,
+			margin_top: mr_green,
+			margin_top_class: false,
+			margin_bottom: false,
+			content: {
+				colWidth: td_2_col_width,
+				colPadding: '10px 10px',
+				valing_right: 'top',
+				valing_left: 'top',
+				col2_left: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-type-product-208-01.jpg',
+						cardItemImgAlt: 'Для мужчин',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 208,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Для мужчин'
+					}
+				},
+				col2_right: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-type-product-208-02.jpg',
+						cardItemImgAlt: 'Для женщин',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 208,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Для женщин'
+					}
+				}
+			}
+		})
+
+	if data.cardList5
+		+row({
+			col: 2,
+			bg_body: bg_body_3,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width,
+			rtl: false,
+			margin_top: false,
+			margin_top_class: false,
+			margin_bottom: false,
+			content: {
+				colWidth: td_2_col_width,
+				colPadding: '10px 10px',
+				valing_right: 'top',
+				valing_left: 'top',
+				col2_left: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-type-product-208-03.jpg',
+						cardItemImgAlt: 'Для девочек',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 208,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Для девочек'
+					}
+				},
+				col2_right: {
+					name: 'card-item',
+					arg: {
+						cardItemImg: 'templates-100-type-product-208-04.jpg',
+						cardItemImgAlt: 'Для мальчиков',
+						cardItemImgWidth: 208,
+						cardItemImgHeight: 208,
+						cardItemMargin: mr_purpur,
+						cardItemUrl: '#',
+						cardItemLink: 'Для мальчиков'
+					}
+				}
+			}
+		})
+
+mixin card-item(data)
+	table.table-after-div(align="center" bgcolor=data.block_bg border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			td(align='center' style="line-height: 0px;" width=data.cardItemImgWidth)
+				+img({
+					img_big: data.cardItemImg, 
+					alt: data.cardItemImgAlt,
+					width: data.cardItemImgWidth,
+					height: data.cardItemImgHeight
+				})
+		tr
+			+td-margin({height: data.cardItemMargin})
+		tr
+			<!-- ID:TXT LINK  -->
+			td.h3(align='center')
+				a.link.link--grey-black.link--no-decor(href=data.cardItemUrl)!=data.cardItemLink
+		if data.text
+			tr
+				<!-- ID:TXT TEXT  -->
+				td.text(align='center')!=data.text

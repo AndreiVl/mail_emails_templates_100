@@ -1,0 +1,14 @@
+.ul {
+	/* 2 Block model */
+
+	/* 4 Visual */
+	list-style: disc;
+}
+.ul li {
+	/* 2 Block model */
+	margin-bottom: 6px;
+}
+.ul li:last-child {
+	/* 2 Block model */
+	margin-bottom: 0;
+}

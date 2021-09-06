@@ -1,0 +1,31 @@
+.col {
+	/* 2 Block model */
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	vertical-align: top;
+}
+.col--2 {
+	/* 2 Block model */
+	max-width: 350px;
+}
+.col--3 {
+	/* 2 Block model */
+	max-width: 164px;
+}
+.col--4 {
+	/* 2 Block model */
+	max-width: 225px;
+}
+.col--6 {
+	/* 2 Block model */
+	max-width: 332px;
+}
+.col--middle {
+	/* 2 Block model */
+	vertical-align: middle;
+}
+.col--md-right {
+	/* 3 Typography */
+	text-align: right;
+}

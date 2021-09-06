@@ -1,0 +1,25 @@
+.lead {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $color-lead;
+	text-decoration: none;
+	mso-line-height-rule: exactly;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-moz-text-sizeadjust: none;
+}
+.lead--xl {
+	/* 3 Typography */
+	font-size: 26px;
+	line-height: 34px;
+}
+.lead--black {
+	/* 3 Typography */
+	color: $color-header;
+}

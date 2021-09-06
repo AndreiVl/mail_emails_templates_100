@@ -1,0 +1,23 @@
+mixin head(title='')
+	head
+		|<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+		meta(content="text/html; charset=utf-8" http-equiv="Content-Type")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		|<!--[if !mso]><!-->
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		|<!--<![endif]-->
+		meta(name="x-apple-disable-message-reformatting")
+		meta(name="format-detection" content="telephone=no")
+
+		title #{title}
+		//- link(href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Lato:300,400,700" rel="stylesheet")
+		link(href="css/style.css" rel="stylesheet")
+
+		style(type="text/css")
+			|html { -webkit-text-size-adjust:none; -ms-text-size-adjust: none;}
+			|@-ms-viewport {width:device-width}		
+			|a[href^="tel"] {color: inhert!important; text-decoration: none!important;}
+		style(type="text/css")
+			|@media only screen and (max-width: 640px) {
+			|.text--mobile {font-size: 20px!important; line-height: 32px!important; text-transform: uppercase; color: #c4c4c4!important;}
+			|}

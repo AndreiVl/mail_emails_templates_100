@@ -1,0 +1,109 @@
+mixin about-us(data)
+	<!-- ABOUT US STARTS -->
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION-2 -->
+		table(align="center" bgcolor=bg_body border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tbody
+				tr
+					td(align="center" style="padding-left: " + body_pading_l + "px; padding-right: " + body_pading_r + "px;")
+						+IE({width: body_width ,align: 'center', valign: 'top'})
+						div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+							table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+								tr
+									+td-margin({height: data.margin_top})
+								tr
+									td
+										table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+											tr
+												td(align="center" style="font-size: 0;")
+													+IE({col: 2, width_col: '272', align: 'center', valign: 'top'})
+													div(style="display: inline-block; width:100%; max-width: 272px; vertical-align: top;")
+														<!-- TABLE LEFT -->
+														table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" class="display-width-child" width="100%")
+															tr
+																td(align="center" style="padding: 15px 10px;")
+																	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 100%;")
+																		tr
+																			td(align="center")
+																				table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")
+																					tr
+																						td(align="left" style="color: #666666;" width=data.img_width)
+																							+img({img_big: data.img, alt: data.img_alt, width: data.img_width , height: data.img_height})
+													+IE({col_td: 2, width_col: '300', align: 'left', valign: 'top'})
+													div(style="display: inline-block; width: 100%; max-width: 300px; vertical-align: top;")
+														<!-- TABLE RIGHT -->
+														table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+															tr
+																td(align="left" style="padding: 15px 10px;")
+																	<!-- ID:BG ABOUT OUTER BG -->
+																	table.table-after-div(align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%")
+																		tr
+																			+td-margin({margin: 'mr-salat'})
+																		tr
+																			td(align="center")
+																				table(align="center" border="0" cellpadding="0" cellspacing="0" width="90%")
+																					tr
+																						<!-- ID:TXT ABOUT HEADING -->
+																						td.h2(align=data.alignment_title)!=data.title
+																					tr
+																						+td-margin({height: data.margin_title})
+																					tr
+																						<!-- ID:TXT ABOUT CONTENT -->
+																						td.text.text--sm(align=data.alignment_text_1)!=data.text_1
+																					tr
+																						+td-margin({height: data.margin_text_1})
+																					tr
+																						td.text.text--sm(align=data.alignment_text_2)!=data.text_2
+																					tr
+																						+td-margin({height: data.margin_text_2})
+																					tr
+																						td
+																							table(align="left" border="0" cellspacing="0" cellpadding="0" width="100%")
+																								tr
+																									td(align="left")
+																										table.table-important(align="left" border="0" cellpadding="0" cellspacing="0")
+																											tr
+																												td(align="left")
+																													<!-- ID:BTN ABOUT BUTTON-1 -->
+																													+btn({link: data.btn_1_url, img: data.btn_1_img, width: data.btn_1_width, height: data.btn_1_height})
+																												td(width="10")
+																													|&nbsp;
+																												td(align="left")
+																													<!-- ID:BTN ABOUT BUTTON-2 -->
+																													+btn({link: data.btn_2_url, img: data.btn_2_img, width: data.btn_2_width, height: data.btn_2_height})
+																		tr
+																			+td-margin({height: '22'})
+													|!{IE_TABLE_END}
+								tr
+									+td-margin({height: data.margin_bottom})
+						|!{IE_TABLE_END}
+	|!{IE_TABLE_END}
+	<!-- ABOUT US ENDS -->
+
+	//- вызов
+	//- +about-us({
+	//- 	margin_top: '',
+	//- 	margin_bottom: '',
+	//- 	img: '',
+	//- 	img_alt: '',
+	//- 	img_width: '',
+	//- 	img_height: '',
+	//- 	alignment_title: '',
+	//- 	title: '',
+	//- 	margin_title: '',
+	//- 	alignment_text_1: '',
+	//- 	text_1: '',
+	//- 	margin_text_1: '',
+	//- 	alignment_text_2: '',
+	//- 	text_2: '',
+	//- 	margin_text_2: '',
+	//- 	btn_1_url: '',
+	//- 	btn_1_img: '',
+	//- 	btn_1_width: '',
+	//- 	btn_1_height: '',
+	//- 	btn_2_url: '',
+	//- 	btn_2_img: '',
+	//- 	btn_2_width: '',
+	//- 	btn_2_height: ''
+	//- })

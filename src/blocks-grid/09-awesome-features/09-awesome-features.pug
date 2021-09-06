@@ -1,0 +1,115 @@
+mixin awesome-features(data)
+	<!-- AWESOME FEATURES STARTS -->
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION-1 -->
+		table(align="center" bgcolor=bg_body_2 border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="padding-left: " + body_pading_l + "px; padding-right: " + body_pading_r + "px;")
+					+IE({width: body_width ,align: 'center', valign: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+							tr
+								+td-margin({height: data.margin_top})
+							tr
+								td(align="center" style="width: 100%; border:0;")
+									<!-- ID:BR AWESOME BORDER -->
+									table(align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #cccccc; border-radius:5px;")
+										tr
+											td(align="center")
+												table(align="center" border="0" width="100%" cellspacing="0" cellpadding="0")
+													tr
+														+td-margin({height: data.title_margin_top})
+													tr
+														<!-- ID:TXT AWESOME TITLE -->
+														td.h2(align=data.alignment_title)!=data.title
+													tr
+														+td-margin({height: data.title_margin_bottom})
+													tr
+														td
+															table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+																tr
+																	td(align="center" style="font-size: 0;")
+																		+IE({col: 3, width: '580' , width_col: '285', align: 'center', valign: 'top'})
+																		div(style="display: inline-block; width:100%; max-width: 285px; vertical-align: top;")
+																			<!-- TABLE LEFT -->
+																			table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+																				tr
+																					td(align="center" style="padding: 15px 10px;")
+																						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 100%;")
+																							tr
+																								td(align="left" valign="top" width=data.img_width height=data.img_height style="line-height: " + data.img_height + "px; font-size: 0;")
+																									+img({img_sm: data.img, alt: data.img_alt, width: data.img_width , height: data.img_height})
+																							tr
+																								+td-margin({height: data.img_margin})
+																							tr
+																								<!-- ID:TXT AWESOME CONTENT -->
+																								td.text.text--sm(align=data.alignment_text)!=data.text
+																							tr
+																								+td-margin({height: data.text_margin})
+																							tr
+																								<!-- ID:TXT AWESOME TXT-LINK -->
+																								td.text.text--bold(align=data.alignment_link)
+																									a.link(href=data.url_link)!=data.link
+																		+IE({col_td: 2, width_col: '285', align: 'left', valign: 'top'})
+																		div(style="display: inline-block; width: 100%; max-width: 285px; vertical-align: top;")
+																			<!-- TABLE RIGHT -->
+																			table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+																				tr
+																					td(align="center" style="padding: 15px 10px;")
+																						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 100%;")
+																							tr
+																								td(align="left" valign="top" width=data.img_2_width height=data.img_2_height style="line-height: " + data.img_2_height + "px; font-size: 0;")
+																									+img({img_sm: data.img_2, alt: data.img_2_alt, width: data.img_2_width , height: data.img_2_height})
+																							tr
+																								+td-margin({height: data.img_2_margin})
+																							tr
+																								<!-- ID:TXT AWESOME CONTENT -->
+																								td.text.text--sm(align=data.alignment_text_2)!=data.text_2
+																							tr
+																								+td-margin({height: data.text_2_margin})
+																							tr
+																								<!-- ID:TXT AWESOME TXT-LINK -->
+																								td.text.text--bold(align=data.alignment_link_2)
+																									a.link(href=data.url_link_2)!=data.link_2
+																		|!{IE_TABLE_END}
+													tr
+														+td-margin({height: data.title_margin_footer})
+							tr
+								+td-margin({height: data.margin_bottom})
+						|!{IE_TABLE_END}
+	|!{IE_TABLE_END}	
+	<!-- AWESOME FEATURES ENDS -->
+
+//- вызов
+//- +awesome-features({
+//- 	margin_top: '',
+//- 	margin_bottom: '',
+//- 	alignment_title: '',
+	title_margin_top: '',
+//- 	title: '',
+//- 	title_margin_bottom: '',
+	title_margin_footer: '',
+//- 	img: '',
+//- 	img_alt: '',
+//- 	img_width: '',
+//- 	img_height: '',
+//- 	img_margin: '',
+//- 	alignment_text: '',
+//- 	text: '',
+//- 	text_margin: '',
+//- 	alignment_link: '',
+//- 	url_link: '',
+//- 	link: '',
+//- 	img_2: '',
+//- 	img_2_alt: '',
+//- 	img_2_width: '',
+//- 	img_2_height: '',
+//- 	img_2_margin: '',
+//- 	alignment_text_2: '',
+//- 	text_2: '',
+//- 	text_2_margin: '',
+//- 	alignment_link_2: '',
+//- 	url_link_2: '',
+//- 	link_2: ''
+//- })

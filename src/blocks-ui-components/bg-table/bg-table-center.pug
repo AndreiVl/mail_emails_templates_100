@@ -1,0 +1,26 @@
+<!-- BG  STARTS -->
++IE({width: table_width ,aling: 'center', valing: 'top'})
+div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+	<!-- ID:BG BG OPTIONAL BGCOLOR -->
+	table(align="center" bgcolor="#BCBBAF" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+		tr
+			td(align="center" background=image_path+"bg__colorli1-01.jpg" style="width:100%; background-image:url("+image_path+"bg__colorli1-01.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;")
+				+IE-BG({bg_1: 1, width: '600', height: '400', img: 'bg__colorli1-01.jpg', color: '#BCBBAF'})
+				table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" )
+					tr
+						td(style="padding-left: 17px;")
+							|&nbsp;
+						td(align="center" style="font-size:0;")
+							table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+								tr
+									+td-margin({height: '11'})
+								tr
+									td(align="center")
+									<!-- ID:BG CONTENT-BG -->
+								tr
+									+td-margin({height: '11'})
+						td(style="padding-right: 17px;")
+							|&nbsp;
+				|!{IE_BG_END}
+|!{IE_TABLE_END}
+<!-- BG  ENDS -->

@@ -1,0 +1,144 @@
+- var image_path = 'images/';
+
+//- указываем путь демо сервера
+//- - var image_path = 'http://fourdinos.com/demo/lite2019/images/';
+
+//- путь к авто картинкам
+//- - var image_path = 'https://place-hold.it/';
+
+//- название картинки меняем только числа
+//- 20x20/cccccc/ff00ff.png&text=20
+
+
+//- Параметры длины таблиц, блоков и колонок сетки
+
+//- Длина всего письма
+- var table_width = '560';
+
+//- Длина тела письма
+- var body_width = '436';
+- var body_width_2 = '456';
+- var body_width_3 = '456';
+
+//- Длина тела письма для 2 колонок
+- var col_body_width = '456';
+
+//- Длина тела письма для 3 колонок
+- var col_body_width_3 = '456';
+
+//- Длина колонок
+- var td_2_col_width = '228';
+- var td_3_col_width = '152';
+
+//- Отступы по краем основного письма
+//- Слева
+- var body_pading_l = '10';
+//- Справа
+- var body_pading_r = '10';
+
+//- Нулевые отступы по краям
+//- Слева
+- var nul_pading_l = '0';
+//- Справа
+- var nul_pading_r = '0';
+
+//- Отступы для 2 колонок 
+//- Слева
+- var col_2_pading_l = '5';
+//- Справа
+- var col_2_ading_r = '5';
+
+//- Отступы для 3 колонок 
+//- Слева
+- var col_3_pading_l = '15';
+//- Справа
+- var col_3_ading_r = '15';
+
+//- Отступы между блоками
+- var mr_body = '30';
+- var mr_red = '100';
+- var mr_orange = '80';
+- var mr_yellow = '80';
+- var mr_green = '70';
+- var mr_blue = '50';
+- var mr_turquoise = '40';
+- var mr_mediumblue = '30';
+- var mr_lightblue = '25';
+- var mr_darkblue = '20';
+- var mr_purpur = '15';
+- var mr_violet = '10';
+- var mr_crayola = '5';
+
+//- Цвет бегрунда основного письма
+- var bg_table = '#FAFAFA';
+
+//- Цвет бегрунда тела письма
+- var bg_body = '#FFFFFF';
+- var bg_body_2 = '#F9ECE4';
+- var bg_body_3 = '#FAFAFA';
+
+//- переменные коментария для IE 11. В основном пользуемся миксином. Тут берем только закрытие коментария у таблицы.
+- var IE_TABLE_START = '<!--[if (gte mso 9)|(IE)]><table width="'+body_width+'" align="center" border="0" cellspacing="0" cellpadding="0"><tr><td align="left" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START}
+
+- var IE_TABLE_START_2_COL = '<!--[if (gte mso 9)|(IE)]><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+td_2_col_width+'" align="right" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START_2_COL}
+
+- var IE_TABLE_START_3_COL = '<!--[if (gte mso 9)|(IE)]><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="'+td_3_col_width+'" align="center" valign="top"><![endif]-->';
+//-  вызов |!{IE_TABLE_START_3_COL}
+
+- var IE_TABLE_END = '<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->';
+//-  вызов |!{IE_TABLE_END}
+
+- var IE_TD_START_2_COL = '<!--[if (gte mso 9)|(IE)]></td><td  align="left" valign="middle" width="'+td_2_col_width+'"><![endif]-->';
+//-  вызов |!{IE_TD_START_2_COL}
+
+- var IE_TD_START_3_COL = '<!--[if (gte mso 9)|(IE)]></td><td  align="left" valign="top" width="'+td_3_col_width+'"><![endif]-->';
+//-  вызов |!{IE_TD_START_3_COL}
+
+//- Переменая для беграунда
+//- Начало
+- var IE_BG_START = '<!--[if (gte mso 9)|(IE)]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width: 600px; height: 400px;"><v:fill type="frame" src="'+image_path+'bg__colorli1-01.jpg" color="#BCBBAF"/><v:textbox inset="0,0,0,0"><![endif]-->';
+//- Конец
+- var IE_BG_END = '<!--[if (gte mso 9)|(IE)]></v:textbox> </v:rect> <![endif]-->';
+
+include margin/margin.pug
+include td-margin/td-margin.pug
+include td-width/td-width.pug
+include IE/IE.pug
+include IE-BG/IE-BG.pug
+include img/img.pug
+include img/img--wraper.pug
+include btn/btn.pug
+include ul/ul.pug
+include icon-text/icon-text.pug
+include bulet-li/bulet-li.pug
+include title/title.pug
+
+//- blocks-grid
+include ../blocks-grid/01-view-in-browser/01-view-in-browser.pug
+include ../blocks-grid/02-menu-1/02-menu-2.pug
+include ../blocks-grid/03-menu-2/03-menu-2-mix.pug
+include ../blocks-grid/06-title-1/06-title-1.pug
+include ../blocks-grid/06-title-1/06-title-2.pug
+include ../blocks-grid/06-title-1/06-title-3.pug
+include ../blocks-grid/06-title-1/06-title-4.pug
+include ../blocks-grid/07-header-bg/07-header-bg.pug
+include ../blocks-grid/07-header-bg/07-header-bg-2.pug
+include ../blocks-grid/08-about-us/08-about-us.pug
+include ../blocks-grid/09-awesome-features/09-awesome-features.pug
+include ../blocks-grid/10-creative-design/10-creative-design.pug
+include ../blocks-grid/11-card-img/11-card-img.pug
+include ../blocks-grid/12-element/12-element.pug 
+include ../blocks-grid/13-banner/13-banner.pug
+include ../blocks-grid/14-menu-top/14-menu-top.pug
+include ../blocks-grid/14-menu-top/14-menu-top-2.pug
+include ../blocks-grid/15-text/15-text.pug
+include ../blocks-grid/16-divider-width/16-divider-width.pug
+include ../blocks-grid/column-1/column-1.pug
+include ../blocks-grid/column-2/column-2.pug
+include ../blocks-grid/column-3/column-3.pug
+include ../blocks-grid/row/row.pug
+include ../blocks-grid/col-1/col-1.pug
+include ../blocks-grid/col-2/col-2.pug
+include ../blocks-grid/col-3/col-3.pug 

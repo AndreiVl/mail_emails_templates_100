@@ -1,0 +1,5 @@
+mixin btn(data)
+	a(href=data.link target="_blank" style="display: inline-block; text-decoration: none;")
+		img(src=image_path+data.img border="0" alt="btn"  width=data.width height=data.height style="display: block; width: 100%; max-width: " + data.width + "px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+
+//- вызов +btn({link: '', img: '', width: '', height: ''})

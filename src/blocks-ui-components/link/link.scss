@@ -1,0 +1,40 @@
+.link {
+	/* 2 Block model */
+	display: inline-block;
+
+	/* 3 Typography */
+	text-decoration: underline;
+	color: $color-link;
+}
+.link--block {
+	/* 2 Block model */
+	display: block;
+}
+.link--brend {
+	/* 3 Typography */
+	color: $color-brend;
+}
+.link--white {
+	/* 3 Typography */
+	color: $color-white;
+}
+.link--text {
+	/* 3 Typography */
+	color: $color-text;
+}
+.link--black {
+	/* 3 Typography */
+	color: $color-h1;
+}
+.link--grey-black {
+	/* 3 Typography */
+	color: $color-grey-black;
+}
+.link--no-decor {
+	/* 3 Typography */
+	text-decoration: none;
+}
+.link:hover {
+	/* 4 Visual */
+	opacity: 0.7;
+}

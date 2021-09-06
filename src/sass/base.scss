@@ -1,0 +1,91 @@
+body {
+	/* 2 Block model */
+	padding: 0px;
+	margin: 0px;
+}
+table {
+	/* 4 Visual */
+	border-spacing: 0;
+}
+.word-break {
+	/* 2 Block model */
+	display: block;
+
+	/* 3 Typography */
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.divider {
+	/* 4 Visual */
+	border-top: 1px solid $color-border-3;
+}
+.divider-top {
+	/* 4 Visual */
+	border-top: 1px solid $color-border-3;
+}
+.divider-bottom {
+	/* 4 Visual */
+	border-bottom: 1px solid $color-border-2;
+}
+.divider-bottom-table {
+	/* 4 Visual */
+	border-bottom: 4px solid $color-light;
+}
+.intro-page__list {
+	/* 2 Block model */
+	margin: 25px 20px;
+	padding: 0;
+
+	/* 4 Visual */
+	list-style: none;
+}
+.intro-page__list li {
+	/* 3 Typography */
+	font-size: 20px;
+	line-height: 28px;
+	text-transform: capitalize;
+}
+.intro-page__list li a {
+	/* 2 Block model */
+	padding: 7px 15px;
+
+	/* 5 Animation */
+	transition: all 0.4s ease;
+}
+.intro-page__list li:first-child {
+	/* 2 Block model */
+	margin-bottom: 26px;
+
+	/* 3 Typography */
+	text-align: center;
+}
+.intro-page__list li:nth-child(2n) a {
+	/* 4 Visual */
+	background-color: #eee;
+}
+.intro-page__list a {
+	/* 2 Block model */
+	display: block;
+
+	/* 3 Typography */
+	color: #000000;
+	text-decoration: none;
+}
+.intro-page__list li a:hover {
+	/* 4 Visual */
+	background-color: rgba($color: rgb(105, 103, 103), $alpha: 0.4);
+}
+.intro-page__list li:first-child a:hover {
+	/* 4 Visual */
+	background-color: transparent;
+}
+.intro-page__list li:nth-child(2n) a:hover {
+	/* 4 Visual */
+	background-color: rgba($color: rgb(185, 185, 185), $alpha: 0.7);
+}
+.intro-page__list-title {
+	/* 3 Typography */
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: bold;
+}

@@ -1,0 +1,24 @@
+.h1 {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 34px;
+	color: $color-h1;
+	text-decoration: none;
+	mso-line-height-rule: exactly;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-moz-text-sizeadjust: none;
+}
+.h1--white {
+	/* 3 Typography */
+	color: $color-white;
+}
+.h1--regular {
+	/* 3 Typography */
+	font-weight: 400;
+}

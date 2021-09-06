@@ -1,0 +1,23 @@
+mixin banner(data)
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION -->
+		table(align="center" bgcolor=data.bg_body border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="font-size: 0;")
+					+#{data.name}(data.arg)
+			if data.margin
+				tr
+					+td-margin({height: data.margin })
+
+	|!{IE_TABLE_END}
+
+//- вызовы
+
+//- +banner({
+//- 	name: '',
+//- 	bg_body: '',
+//- 	margin: ''
+//- 	arg: {
+//- 	}
+//- })

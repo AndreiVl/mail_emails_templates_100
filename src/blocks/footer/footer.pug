@@ -1,0 +1,112 @@
+mixin footer(data)
+	if data.footer1
+		+row({
+			col: 1,
+			bg_body: bg_body_3,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_turquoise,
+			margin_bottom: mr_darkblue,
+			content: {
+				name: 'text',
+				arg: [
+					{
+						type: 'content',
+						name: 'socials',
+						arg: {
+							social: true
+						}
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '8502 Preston Rd. Inglewood,Los Angeles, MM-75859',
+						alignment: 'center'
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '<a href="mailto:company@mail.com" class="link link--text link--no-decor" target="_blank">company@mail.com</a>',
+						alignment: 'center'
+					},
+					{
+						type: 'margin',
+						margin: mr_crayola
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '<a href="tel:+0123456789" class="link link--text link--no-decor">+012 345 6789</a>',
+						alignment: 'center'
+					},
+					{
+						type: 'margin',
+						margin: mr_purpur
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '© All Rights Reserved&nbsp;&nbsp;<span class="text-line">|</span>&nbsp;&nbsp;<a href="mailto:emailtest@domain.com" class="link link--text">Unsubscribe</a>',
+						alignment: 'center'
+					}
+				]
+			}
+		})
+	if data.footer2
+		+row({
+			col: 1,
+			bg_body: bg_body_3,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_lightblue,
+			margin_top_class: 'divider-top',
+			margin_bottom: mr_darkblue,
+			content: {
+				name: 'text',
+				arg: [
+					{
+						type: 'content',
+						name: 'socials',
+						arg: {
+							social: true
+						}
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '8502 Preston Rd. Inglewood,Los Angeles, MM-75859',
+						alignment: 'center'
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '<a href="mailto:company@mail.com" class="link link--text link--no-decor" target="_blank">company@mail.com</a>',
+						alignment: 'center'
+					},
+					{
+						type: 'margin',
+						margin: mr_crayola
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '<a href="tel:+0123456789" class="link link--text link--no-decor">+012 345 6789</a>',
+						alignment: 'center'
+					},
+					{
+						type: 'margin',
+						margin: mr_purpur
+					},
+					{
+						type: 'text',
+						class: 'text text--sm',
+						text: '© All Rights Reserved&nbsp;&nbsp;<span class="text-line">|</span>&nbsp;&nbsp;<a href="mailto:emailtest@domain.com" class="link link--text">Unsubscribe</a>',
+						alignment: 'center'
+					}
+				]
+			}
+		})

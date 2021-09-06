@@ -1,0 +1,12 @@
+mixin title(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			td(align='center')
+				table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")
+					tr 
+						td(width="34" height="2" bgcolor="#FF3939")
+		tr
+			+td-margin({height: mr_purpur})
+		tr
+			<!-- ID:TXT TITLE -->
+			td.h1(align='center')!=data.title

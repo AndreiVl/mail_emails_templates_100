@@ -1,0 +1,46 @@
+//- Виды таблиц:
+//- 1. Общая 
+table(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%")
+	tr
+		td(align="center")
+
+//- 1.1 Стандартная
+table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+
+//- 2. Таблица которая пишется после div, когда div 1 в строке и содержимое состоит из приемущество из текста.
+//- Так же пишется она для длины письма и длины содержимого письма.
+table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;")
+
+//- 3. Таблица которая пишется после div(когда их идет более 1 в строке или в div разнообразное содержимое, а не только текст.)
+//- Пишется во все внутрених div.
+//- Так же обычно td этой таблицв задают падинги для отсупов по горизонтале и по вертикали(для моб версии).
+<!-- TABLE RIGHT -->
+table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;")
+<!-- TABLE RIGHT -->
+table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+
+//- 4. Таблица которая пишется в td с падингом для колонки.
+//- 4.1 Когда содержимое по центру и есть свободное место по краям. Где в содержиомо есть как картики так и текст.
+table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;")
+
+table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+
+//- 4.2 Когда содержимое по все длине блока контейнреа(во всю ширину).
+table(align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 100%;")
+
+table.table-max-width(align="left" border="0" cellpadding="0" cellspacing="0" width="100%")
+
+//- 5. После таблиц выше, для картинки пишем следующкю таблицу.
+table(align="center" border="0" cellpadding="0" cellspacing="0" style="width: auto !important;")
+	tr
+		td(align="left" style="color:#666666;" width="272")
+
+table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")
+	tr
+		td(align="left" style="color:#666666;" width="272")
+
+//- 5.1 Пишем следующию таблицу, когда нам важна ширину содержимого внутреннего элемента.
+//- В основном нужняо для сылки с картинкой или где идут ссылки в ряд.
+table(align="center" border="0" cellpadding="0" cellspacing="0" style="width: auto !important;")
+
+table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")

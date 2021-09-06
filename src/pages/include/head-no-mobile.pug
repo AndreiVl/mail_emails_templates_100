@@ -1,0 +1,35 @@
+mixin head(title='Mail')
+	head
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(name="viewport" content="width=620")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="x-apple-disable-message-reformatting")
+		
+		|<!--[if gte mso 9]><xml>
+		|<o:OfficeDocumentSettings>
+		|<o:AllowPNG/>
+		|<o:PixelsPerInch>96</o:PixelsPerInch>
+		|</o:OfficeDocumentSettings>
+		|</xml><![endif]-->
+		
+		title #{title}
+
+		link(href="css/style.css" rel="stylesheet")
+
+		style(type="text/css")
+			|html { -webkit-text-size-adjust:none; -ms-text-size-adjust: none;}
+			|@-ms-viewport {width:device-width}	
+			|.link-wrap a {color: #ffffff;}		
+
+		|<!--[if (gte mso 9)|(IE)]>
+		|<style type="text/css">
+		|.not_for_outlook {
+		|mso-hide: all !important;
+		|display: none !important;
+		|font-size: 0;
+		|max-height: 0;
+		|line-height: 0;
+		|mso-hide: all;
+		|}  
+		|</style>
+		|<![endif]-->

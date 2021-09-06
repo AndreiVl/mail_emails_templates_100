@@ -1,0 +1,44 @@
+mixin col2(data)
+	+IE({col: 2, width_col: data.colWidth, align: 'center', valign: data.valing_right})
+	<!-- BLOCK RIGHT -->
+	+col2_block({
+		valign: data.valing_right,
+		colWidth: data.colWidth,
+		name: data.col2_left.name,
+		arg: data.col2_left.arg,
+		padding: data.colPadding
+	})
+
+	+IE({col_td: 2, width_col: data.colWidth, align: 'center', valign: data.valing_left})
+	<!-- BLOCK LEFT -->
+	+col2_block({
+		valign: data.valing_left,
+		colWidth: data.colWidth,
+		name: data.col2_right.name,
+		arg: data.col2_right.arg,
+		padding: data.colPadding
+	})
+	|!{IE_TABLE_END}
+
+mixin col2_block(data)
+	div(style="display: inline-block; width:100%; max-width: " + data.colWidth + "px; vertical-align: " + data.valign + ";")
+		table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center" style="padding: " + data.padding +";")
+					+#{data.name}(data.arg)
+
+//- Вызов
+//- +col2({
+//- 	colWidth: '',
+//- 	valing_right: '',
+//- 	valing_left: '',
+//- 	colPadding: '',
+//- 	col2_left: {
+//- 		name: '',
+//- 		arg: {}
+//- 	},
+//- 	col2_right: {
+//- 		name: '',
+//- 		arg: {}
+//- 	}
+//- })

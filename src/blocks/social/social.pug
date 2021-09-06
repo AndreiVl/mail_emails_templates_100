@@ -1,0 +1,34 @@
+mixin social(data)
+	table(align="center" border="0" bgcolor=data.bgColor cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+		tr 
+			td(align="center")
+				table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")
+					tr 
+						- for (var i = 0; i < data.items.length; i++)
+							if data.items[i]['type'] === 'icon'
+								<!-- ID:ICON -->
+								td(align="left" width=data.items[i]['iconWidth'])
+									a(href=data.items[i]['iconLink'] target="_blank" style="display: inline-block; text-decoration: none;")
+										img(src=image_path+data.items[i]['iconImg'] border="0" alt="btn"  width=data.items[i]['iconWidth'] height=data.items[i]['iconHeight'] style="display: block; width: " + data.items[i]['iconWidth'] + "px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+
+							if data.items[i]['type'] === 'margirn'
+								td(width=data.items[i]['margirnWidth'] style="mso-line-height-rule: exactly; line-height: 5px; font-size: 5px;" class!=attributes.class) &nbsp;
+
+//- +social({
+//- bgColor: '',
+//- title: '',
+//- margin_title: '',
+//- items: 	[
+//- 	{
+//- 		type: 'icon',
+//- 		iconLink: '',
+//- 		iconImg: '',
+//- 		iconWidth: ,
+//- 		iconHeight: 
+//- 	},
+//- 	{
+//- 		type: 'margirn'
+//- 		margirnWidth: 
+//- 	}
+//- ]
+//- })

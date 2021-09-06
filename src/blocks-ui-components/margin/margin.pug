@@ -1,0 +1,39 @@
+mixin margin(data)
+	case data.margin
+		when 'mr-100'
+			- var margin = 100
+		when 'mr-80'
+			- var margin = 80
+		when 'mr-70'
+			- var margin = 70
+		when 'mr-60'
+			- var margin = 60
+		when 'mr-50'
+			- var margin = 50
+		when 'mr-40'
+			- var margin = 40
+		when 'mr-30'
+			- var margin = 30
+		when 'mr-25'
+			- var margin = 25
+		when 'mr-20'
+			- var margin = 20
+		when 'mr-15'
+			- var margin = 15
+		when 'mr-10'
+			- var margin = 10
+		when 'mr-5'
+			- var margin = 5
+		default
+			- var margin = data.height
+
+	table(width="100%" bgcolor=data.bgcolor border="0" cellspacing="0" cellpadding="0" style="padding: 0; margin: 0;" )
+		tbody
+			tr
+				td(height=margin style="mso-line-height-rule: exactly; line-height: " + margin + "px; font-size: 1px;" class!=attributes.class) &nbsp;
+//- Вертикальный отступ между таблицами.
+//- Вызов общих данных в case 
+//- +margin({margin: 'mr-25'}) +margin({margin: 'mr-10'})
+
+//- Вызов любого отступа
+//- +margin({height: '10'}) +margin({height: '50'})

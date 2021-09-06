@@ -1,0 +1,42 @@
+.table-after-div {
+	/* 2 Block model */
+	width: 100%;
+	max-width: 100%;
+
+	/* 4 Visual */
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+.table-after-div-border {
+	/* 4 Visual */
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+.table-width-important {
+	/* 2 Block model */
+	width: auto !important;
+
+	/* 4 Visual */
+	border-collapse: collapse;
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+
+.table-max-width {
+	/* 2 Block model */
+	width: 100%;
+	max-width: 100%;
+}
+.table-max-width-br {
+	/* 2 Block model */
+	max-width: 100%;
+
+	/* 4 Visual */
+	border-spacing: 0;
+}
+.table-important {
+	/* 2 Block model */
+	width: auto !important;
+}

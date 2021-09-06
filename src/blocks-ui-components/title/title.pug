@@ -1,0 +1,27 @@
+mixin title(data)
+	<!-- TITLE STARTS -->
+	+IE({width: table_width ,aling: 'center', valing: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION-2 -->
+		table(align="center" bgcolor=data.bg_body border="0" class="display-width" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="padding-left: " + data.body_pading_l + "px; padding-right: " + data.body_pading_r + "px;")
+					+IE({width:data.width ,aling: 'center', valing: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + data.width + "px; vertical-align: top;")
+						table(align="center" border="0" class="display-width-inner" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + data.width + "px;")
+							tr
+								<!-- ID:TXT TITLE -->
+								td.h1(align="center")!=data.title
+							tr
+								+td-margin({height: '20'})
+							tr
+								<!-- ID:TXT TITLE TWO SUBTITLE -->
+								td.lead(align="center")!=data.text
+							tr
+								+td-margin({height: '15'})
+					|!{IE_TABLE_END}
+	|!{IE_TABLE_END}
+	<!-- TITLE ENDS -->
+
+	//- Вызов
+	//- +title({width: '', bg_body: '', body_pading_l: '', body_pading_r: '', title: '', text: ''})

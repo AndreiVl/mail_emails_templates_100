@@ -1,0 +1,11 @@
+mixin bulet-li(data)
+	table.bulet-li(width="100%" border="0" cellspacing="0" cellpadding="0" class!=attributes.class)
+		tbody
+			tr
+				td(width=data.td_width valign="top" style="line-height: "+data.height+"px; mso-line-height-rule :at-least;")
+					img(src=image_path+data.img alt="" width=data.width height=data.height style="vertical-align: top; width: "+data.width+"px;")
+
+				td(class!=attributes.class__td align="left" valign="top")!=data.text
+
+//- Вызов
+//- +bulet-li({td_width: '', height: '', img: '', width: '4', height: '', text: ''})(class="" class__td="")

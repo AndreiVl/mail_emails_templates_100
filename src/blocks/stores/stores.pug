@@ -1,0 +1,45 @@
+mixin stores(data)
+	+row({
+		col: 1,
+		bg_body: bg_body,
+		body_pading_l: body_pading_l,
+		body_pading_r: body_pading_r,
+		body_width: body_width,
+		rtl: false,
+		margin_top: data.margin_top,
+		margin_bottom: data.margin_bottom,
+		content: {
+			name: 'text',
+			arg: [
+				{
+					type: 'content',
+					name: 'title',
+					arg: {
+						title: 'Download our app'
+					}
+				},
+				{
+					type: 'margin',
+					margin: mr_purpur
+				},
+				{
+					type: 'text',
+					class: 'text',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  incididunt ',
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: mr_darkblue
+				},
+				{
+					type: 'content',
+					alignment: 'center',
+					name: 'store',
+					arg: {
+
+					}
+				}
+			]
+		}
+	})

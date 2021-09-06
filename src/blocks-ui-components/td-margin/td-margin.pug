@@ -1,0 +1,36 @@
+mixin td-margin(data)
+	case data.margin
+		when 'mr-red'
+			- var margin = 100
+		when 'mr-orange'
+			- var margin = 80
+		when 'mr-yellow'
+			- var margin = 80
+		when 'mr-green'
+			- var margin = 70
+		when 'mr-blue'
+			- var margin = 50
+		when 'mr-turquoise'
+			- var margin = 40
+		when 'mr-mediumblue'
+			- var margin = 30
+		when 'mr-lightblue'
+			- var margin = 25
+		when 'mr-darkblue'
+			- var margin = 20
+		when 'mr-purpur'
+			- var margin = 15
+		when 'mr-violet'
+			- var margin = 10
+		when 'mr-crayola'
+			- var margin = 5
+		default
+			- var margin = data.height
+
+	td(height=margin style="mso-line-height-rule: exactly; line-height: " + margin + "px; font-size: 1px;" class!=attributes.class) &nbsp;
+//- Вертикальный отступ между td внутри таблице
+//- Вызов общих данных в case 
+//- +td-margin({margin: 'mr-salat'}) +td-margin({margin: 'mr-violet'})
+
+//- Вызов любого отступа
+//- +td-margin({height: '15.5'}) +td-margin({height: '37.5'})

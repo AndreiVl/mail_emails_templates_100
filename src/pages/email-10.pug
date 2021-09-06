@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="min-height: 100vh;")
+	include include/head.pug
+	+head('email-10')
+
+	body(style="width: 100%; padding: 0; Margin: 0; min-height: 100vh;")
+		include ../blocks-ui-components/ui-components-mixins.pug			
+		include ../blocks/mixins.pug						
+		<!-- BODY -->
+		table(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-height: 100vh;")
+			tr 
+				td(align="center" valign="top" style="vertical-align: top;")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							+td-margin({height: mr_body })
+						tr
+							td(align="center")
+								<!-- HEADER STARTS -->
+								+header({header1: true})
+								<!-- HEADER ENDS -->
+						tr
+							td(align="center")
+								<!-- CONTENT STARTS -->
+									+row({
+										col: 1,
+										bg_body: bg_body_2,
+										body_pading_l: body_pading_l,
+										body_pading_r: body_pading_r,
+										body_width: body_width,
+										rtl: false,
+										margin_top: mr_green,
+										margin_bottom: mr_green,
+										content: {
+											name: 'text',
+											arg: [
+												{
+													type: 'margin',
+													margin: mr_crayola
+												},
+												{
+													type: 'text',
+													class: 'text text--big text--black',
+													text: 'У нас<br>день рождения!',
+													alignment: 'center'
+												},
+												{
+													type: 'margin',
+													margin: mr_blue
+												},
+												{
+													type: 'content',
+													alignment: 'center',
+													name: 'img-wraper',
+													arg: {
+														img: 'templates-100-img-300-259-01.jpg',
+														alt: 'Подарок',
+														width: 300,
+														height: 259
+													}
+												},
+												{
+													type: 'margin',
+													margin: mr_green
+												},
+												{
+													type: 'text',
+													class: 'lead',
+													text: 'Приглашаем вас на праздник, посвященный дню рождения нашего дружного коллектива',
+													alignment: 'center'
+												},
+												{
+													type: 'margin',
+													margin: mr_turquoise
+												},
+												{
+													type: 'text',
+													class: 'text text--big text--brend',
+													text: '19&nbsp;мая 2021&nbsp;г.',
+													alignment: 'center'
+												},
+												{
+													type: 'margin',
+													margin: mr_crayola
+												},
+												{
+													type: 'text',
+													class: 'text text--grey',
+													text: 'ждем вас в ресторане «Пушкин» начало в 18:00',
+													alignment: 'center'
+												},
+												{
+													type: 'margin',
+													margin: mr_turquoise
+												},
+												{
+													type: 'content',
+													alignment: 'center',
+													name: 'btn',
+													arg: {
+														link: '#',
+														img: 'templates-100-btn-194-43-07.png',
+														width: 194,
+														height: 43
+													}
+												}
+											]
+										}
+									})
+								<!-- CONTENT ENDS -->
+						tr
+							td(align="center")
+								<!-- STORES STARTS -->
+								+footer({footer1: true})
+								<!-- STORES ENDS -->
+						tr
+							+td-margin({height: mr_body })
+		<!-- /BODY -->

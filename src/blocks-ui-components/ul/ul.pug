@@ -1,0 +1,6 @@
+mixin ul(data)
+	ul.ul
+		- for (var i = 0; i < data.length; i++)
+			li(class!=data[i]['class'])!=data[i]['text']
+//- Вызов
+//- +ul({text: ''})

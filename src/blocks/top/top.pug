@@ -1,0 +1,99 @@
+mixin top(data)
+	if data.changeTitle 
+		- var changeTitle=data.changeTitle
+	else
+		- var changeTitle='Поставьте оценку дому, <br>в котором купили квартиру'
+
+	if data.changeBtn
+		- var changeBtn=data.changeBtn
+	else
+		- var changeBtn='img_btn_202_36_01.jpg'
+
+	if data.changeLink
+		- var changeLink=data.changeLink
+	else
+		- var changeLink='Адрес указан неточно? <a href="#" class="link" target="_blank">Пройдите опрос о своем доме</a>'
+
+	if data.changeText
+		- var changeLink=data.changeText
+	else
+		- var changeText='Недавно вы купили квартиру в доме по адресу: Россия, Челябинская область, Златоуст, улица Степана Разина, 14.'
+
+	if data.changeText2
+		- var changeLink=data.changeText2
+	else
+		- var changeText2='Пройдите опрос о вашем доме, узнайте его рейтинг и помогите миллионам пользователей ДомКлик в поиске подходящего жилья.'
+
+
+
+	+row({
+		col: 1,
+		bg_body: bg_body_2,
+		body_pading_l: body_pading_l,
+		body_pading_r: body_pading_r,
+		body_width: body_width,
+		rtl: false,
+		margin_top: 30,
+		margin_bottom: 35,
+		margin_bottom_class: 'divider',
+		content: {
+			name: 'text',
+			arg: [
+				{
+					type: 'text',
+					class: 'h1',
+					text: changeTitle,
+					alignment: 'center'
+				},
+					{
+					type: 'margin',
+					margin: 26
+				},
+					{
+					type: 'text',
+					class: 'text',
+					text: changeText,
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: 8
+				},
+				{
+					type: 'text',
+					class: 'text',
+					text: changeText2,
+					alignment: 'center'
+				},
+					{
+					type: 'margin',
+					margin: 26
+				},
+				{
+					type: 'content',
+					alignment: 'center',
+					name: 'btn',
+					arg: {
+						link: '#',
+						img: changeBtn,
+						width: 202,
+						height: 36
+					}
+				},
+				{
+					type: 'margin',
+					margin: 14
+				},
+				{
+					type: 'text',
+					class: 'text',
+					text: changeLink,
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: 26
+				}
+			]
+		}
+	})

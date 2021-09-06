@@ -1,0 +1,31 @@
+.h2 {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 28px;
+	color: $color-h2;
+	text-decoration: none;
+	mso-line-height-rule: exactly;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-moz-text-sizeadjust: none;
+}
+.h2--sm {
+	/* 3 Typography */
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 36px;
+	text-transform: none;
+}
+.h2--white {
+	/* 3 Typography */
+	color: $color-white;
+}
+.h2--red {
+	/* 3 Typography */
+	color: $color-secondary;
+}

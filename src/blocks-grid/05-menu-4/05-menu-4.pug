@@ -1,0 +1,106 @@
+<!-- MENU-4 STARTS -->
++IE({width: table_width ,align: 'center', valign: 'top'})
+div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+	<!-- ID:BG MENU-4 OPTIONAL -->
+	table(align="center" bgcolor=bg_body border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+		tr
+			td(align="center" style="padding-left: " + body_pading_l + "px; padding-right: " + body_pading_r + "px;")
+				+IE({width: body_width ,align: 'center', valign: 'top'})
+				div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+						tr
+							+td-margin({margin: 'mr-yelow'})
+						tr
+							td(align="center" style="font-size: 0;")
+								table.table-max-width(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+									tr
+										td(align="center")
+											table.table-max-width(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+												tr
+													td(align="center" style="border-collapse: collapse;")
+														table.table-width-important(align="center" border="0" cellpadding="0" width="100%" cellspacing="0")
+															tr
+																<!-- ID:TXT MENU-4 -->
+																td(align="center" style="border-collapse: collapse;")
+																	a.link(href="#")
+																		+img({img_sm: '150x50/cccccc/ff00ff.png&text=150x50', alt: '150x50', width: '150' , height: '50'})
+									tr
+										td(align="center" style="font-size: 0;")
+											+IE({width: '500' ,align: 'center', valign: 'top'})
+											div(style="display: inline-block; width:100%; max-width: 500px; vertical-align: top;")
+												table.table-after-div(align="left" border="0" cellpadding="0" width="100%" cellspacing="0")
+													tr
+														<!-- ID:BR MENU-4 BORDER -->
+														td(height="20" style="border-bottom: 1px solid #cccccc;")
+															|&nbsp;
+											|!{IE_TABLE_END}
+									tr
+										td
+											table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;")
+												tr
+													td(align="center" style="border-collapse: collapse; font-size: 0;")
+														+IE({col: 2, width_col: '180', align: 'center', valign: 'top'})
+														div(style="display: inline-block; width:100%; max-width: 180px; vertical-align: top;")
+															<!-- TABLE LEFT -->
+															table.table-after-div(align="left" border="0" cellpadding="0" width="100%" cellspacing="0")
+																tr
+																	td(align="center" style="border-collapse: collapse;")
+																		table.table-width-important(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+																			tr
+																				+td-margin({margin: 'mr-yelow'})
+																			tr
+																				<!-- ID:TXT MENU-4-MAIL -->
+																				td(align="left" valign="middle" width="30")
+																					+img({img_sm: '20x20/cccccc/ff00ff.png&text=20', alt: '150x50', width: '20' , height: '20'})
+																				td.text.text--sm.text--lh-20(align="left" valign="middle")
+																					a.link(href="mailto:company@mail.com") company@mail.com
+																			tr
+																				+td-margin({margin: 'mr-yelow'})
+
+														+IE({col_td: 2, width_col: '190', align: 'center', valign: 'top'})
+														div( style="display: inline-block; width:100%; max-width: 190px; vertical-align: top; ")
+															<!-- TABLE CENTER -->
+															table.table-after-div(align="left" border="0" cellpadding="0" width="100%" cellspacing="0")
+																tr
+																	td(align="center" style="border-collapse: collapse;")
+																		table.table-width-important(align="center" border="0" cellpadding="0" cellspacing="0")
+																			tbody
+																				tr
+																					+td-margin({margin: 'mr-yelow'})
+																				tr
+																					<!-- ID:TXT MENU-4-PHONE NUM -->
+																					td(align="left" valign="middle" width="30")
+																						+img({img_sm: '20x20/cccccc/ff00ff.png&text=20', alt: '150x50', width: '20' , height: '20'})
+																					td.text.text--sm.text--lh-20(align="left" valign="middle")
+																						a.link(href="tel:+0123456789") +012 345 6789
+																				tr
+																					+td-margin({margin: 'mr-yelow'})
+														+IE({col_td: 2, width_col: '220', align: 'center', valign: 'top'})
+														div(style="display: inline-block; width:100%; max-width: 220px; vertical-align: top;")
+															<!-- TABLE RIGHT -->
+															table.table-after-div(align="left" border="0" cellpadding="0" width="100%" cellspacing="0")
+																tr
+																	td(align="center" style="border-collapse: collapse;")
+																		table(align="center" border="0" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;")
+																			tr
+																				+td-margin({margin: 'mr-yelow'})
+																			tr
+																				<!-- ID:TXT MENU-4 -->
+																				td.text.text--sm.text--lh-20(align="center")
+																					a.link(href="#") ABOUT
+																				td(width="10")
+																					|&nbsp;
+																				td.text.text--sm.text--lh-20(align="center")
+																					a.link(href="#") SERVICES
+																				td(width="10")
+																					|&nbsp;
+																				td.text.text--sm.text--lh-20(align="left")
+																					a.link(href="#") CONTACT
+																			tr
+																				+td-margin({margin: 'mr-yelow'})
+														|!{IE_TABLE_END}		
+						tr
+							+td-margin({margin: 'mr-yelow'})
+				|!{IE_TABLE_END}
+|!{IE_TABLE_END}
+<!-- MENU-4 ENDS -->

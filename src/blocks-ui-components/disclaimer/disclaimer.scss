@@ -1,0 +1,12 @@
+.disclaimer {
+	/* 2 Block model */
+	display: block;
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 11px;
+	color: #7d7d7d;
+	text-align: left;
+	letter-spacing: 0.1px;
+}

@@ -1,0 +1,74 @@
+mixin header-bg(data)
+	<!-- HEADER BG  STARTS -->
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG HEADER OPTIONAL BG -->
+		table(align="center" bgcolor=data.bgcolor border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" background=image_path+data.bg_img style="width: 100%; background-image:url("+image_path+data.bg_img+"); background-position: center; background-size: cover; background-repeat: no-repeat;")
+					+IE-BG({bg_1: 1, width: data.bg_width, height: data.bg_height, img: data.bg_img, color: data.bgcolor})
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" )
+						tr
+							td(width=data.padding_left)
+								|&nbsp;
+							td(align="center" style="font-size:0;")
+								table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+									tr
+										+td-margin({height: data.margin_top})
+									tr
+										td(align="left")
+											+IE({col: 2, width_col: data.width_col_IE , align: 'left', valign: 'top'})
+											div(style="display: inline-block; width: 100%; max-width: " + data.width_col_div + "px; vertical-align:top;")
+												table.table-after-div-border(align="left" border="0" cellpadding="0" cellspacing="0" width="100%")
+													tr
+														<!-- ID:TXT HEADER HEADING -->
+														td.h1(align=data.alignment_title)!=data.title
+													tr
+														+td-margin({height: data.margin_title})
+													tr
+														<!-- ID:TXT HEADER CONTENT -->
+														td.text.text--sm(align=data.alignment_text)!=data.text
+													tr
+														+td-margin({height: data.margin_text})
+													tr
+														<!-- ID:TXT HEADER  BUTTON -->
+														td(align=data.alignment_btn)
+															+btn({link: data.link, img: data.img_btn, width: data.width_btn, height: data.height_btn})
+											if data.width_col_IE_end
+												+IE({col_td: 2, width_col: data.width_col_IE_end , align: 'center', valign: 'top'})
+											|!{IE_TABLE_END}
+									tr
+										+td-margin({height: data.margin_bottom})
+							td(width=data.padding_right)
+								|&nbsp;
+					|!{IE_BG_END}
+	|!{IE_TABLE_END}
+	<!-- HEADER BG  ENDS -->
+
+//- вызов
+//- +header-bg({
+	bgcolor: '',
+	bg_img: '',
+	bg_width: '',
+	bg_height: '',
+	padding_left: '',
+	padding_right: '',
+	margin_top: '',
+	margin_bottom: '',
+	width_col_IE: '',
+	width_col_IE_end: '', c условием
+	width_col_div: '',
+	alignment_title: '',
+	margin_title: '',
+	alignment_text: '',
+	margin_text: '',
+	alignment_btn: '',
+	title: '',
+	text: '',
+	link: '',
+	img_btn: '',
+	width_btn: '',
+	height_btn: ''
+	})
+	"680x617/cccccc/ff00ff.png&text=680x617"
+	'117x31/000000/ff00ff.png&text=117x31'

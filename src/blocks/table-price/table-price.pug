@@ -1,0 +1,135 @@
+mixin table-price(data)
+	if data.tablePriceHead
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			alignTd: 'left',
+			margin_top: false,
+			margin_bottom: mr_violet,
+			content: {
+				name: 'table-price-head',
+				arg: {
+					tablePriceHeadTitle1: 'Item',
+					tablePriceHeadTitle2: 'Qty',
+					tablePriceHeadTitle3: 'Price'
+				}
+			}
+		})
+	if data.tablePriceList
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			alignTd: 'left',
+			margin_top: false,
+			margin_bottom: mr_crayola,
+			content: {
+				name: 'table-price-item',
+				arg: [
+					{	
+						type: 'item',
+						textLeft: 'Slim tapper 512 jeans',
+						textCenter: 'x1',
+						textRight: '120$'
+					},
+					{	
+						type: 'lastItem',
+						textLeft: 'T-shirt blue sky',
+						textCenter: 'x1',
+						textRight: '80$'
+					}
+				]
+			}
+		})
+	if data.tablePriceTotal
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			alignTd: 'left',
+			margin_top: mr_turquoise,
+			margin_bottom: mr_blue,
+			content: {
+				name: 'table-price-total',
+				arg: [
+					{	
+						type: 'subtotal',
+						subtotal: '200$'
+					},
+					{
+						type: 'shipping',
+						shipping: '0$'
+					}
+				]
+			}
+		})
+
+
+mixin table-price-head(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+		tr 
+			+td-margin({margin: 'mr-violet'})(class="divider")
+		tr
+			td(align="center")
+				table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+					tr
+						td.h2.h2--bold(align="left" width="60")!=data.tablePriceHeadTitle1
+						td.h2.h2--bold(align="center" width="100%")!=data.tablePriceHeadTitle2
+						td.h2.h2--bold(align="right" width="60")!=data.tablePriceHeadTitle3
+		tr
+			+td-margin({margin: 'mr-purpur' })(class="divider-bottom")
+
+mixin table-price-item(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+		tr
+			td(align="center")
+				table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+					- for (var i = 0; i < data.length; i++)
+						if data[i]['type'] === 'item'
+							tr
+								td.text(align="left" width="232")!=data[i]['textLeft']
+								td.text(align="center" width="39")!=data[i]['textCenter']
+								td.text(align="right" width="231")!=data[i]['textRight']
+							tr
+								+td-margin({margin: 'mr-violet'})
+
+						if data[i]['type'] === 'lastItem'
+							tr
+								td.text(align="left" width="232")!=data[i]['textLeft']
+								td.text(align="center" width="39")!=data[i]['textCenter']
+								td.text(align="right" width="231")!=data[i]['textRight']
+							tr
+								td.divider-bottom(height="15" colspan="3" style="mso-line-height-rule: exactly; line-height: 15px; font-size: 1px;") &nbsp;
+
+
+mixin table-price-total(data)
+	table(align="right" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+		tr
+			td(align="right")
+				table.table-after-div(align="right" border="0" cellpadding="0" cellspacing="0" width="100%")
+					- for (var i = 0; i < data.length; i++)
+						if data[i]['type'] === 'subtotal'
+							tr
+								td(align="right")
+									table.table-important(align="right" border="0" cellpadding="0" cellspacing="0")
+										tr
+											td.text.text--black(align="right" width="100") Subtotal:
+											td.h2.h2--red.h2--bold(align="right" width="60")!=data[i]['subtotal']
+
+						if data[i]['type'] === 'shipping'
+							tr
+								td(align="right")
+									table.table-important(align="right" border="0" cellpadding="0" cellspacing="0")
+										tr
+											td.text.text--black(align="right" width="100") Shipping:
+											td.h2.h2--bold(align="right" width="60")!=data[i]['shipping']

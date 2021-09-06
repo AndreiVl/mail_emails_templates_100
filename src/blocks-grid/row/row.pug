@@ -1,0 +1,152 @@
+mixin row(data)
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION -->
+		table(align="center" bgcolor=data.bg_body border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px; "+ data.styleTableSection +"")
+			tr
+				td(align="center" style="padding-left: " + data.body_pading_l + "px; padding-right: " + data.body_pading_l + "px;")
+					+IE({width: data.body_width ,align: 'center', valign: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + data.body_width + "px; vertical-align: top;")
+						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + data.body_width + "px;")
+							tr
+								+td-margin({height: data.margin_top})(class=data.margin_top_class)
+							tr
+								if data.rtl || data.alignTd
+									td(align=data.alignTd dir=data.rtl style="font-size: 0;")
+										case data.col
+											when 1
+												+col1(data.content)
+											when 2
+												+col2(data.content)
+											when 3
+												+col3(data.content)
+								else
+									td(align="center" style="font-size: 0;")
+										case data.col
+											when 1
+												+col1(data.content)
+											when 2
+												+col2(data.content)
+											when 3
+												+col3(data.content)
+							tr
+								+td-margin({height: data.margin_bottom})(class=data.margin_bottom_class)
+					|!{IE_TABLE_END}
+	|!{IE_TABLE_END}
+
+
+
+//- Вызов.
+//- +row({
+//- 	col: 1,
+//- 	styleTableSection: '',
+//- 	bg_body: '',
+//- 	body_pading_l: '',
+//- 	body_pading_r: '',
+//- 	body_width: '',
+//- 	rtl: false,
+//- 	margin_top: '',
+//- 	margin_top_class: false,
+//- 	margin_bottom: '',
+//- 	margin_bottom_class:'',
+//- 	content: {
+
+//- 		}
+//- 	}
+//- })
+
+//- Пример с 1 колонка
+
+//- <!-- STARTS -->
+//- +row({
+//- 	col: 1,
+//- 	bg_body: bg_body,
+//- 	body_pading_l: body_pading_l,
+//- 	body_pading_r: body_pading_r,
+//- 	body_width: body_width,
+//- 	rtl: false,
+//- 	margin_top: '20',
+//- 	margin_top_class: false,
+//- 	margin_bottom: '20',
+//- 	content: {
+//- 		name: '',
+//- 		arg: {
+//- 		}
+//- 	}
+//- })
+//- <!-- ENDS -->
+
+//- Пример с 2 колонками
+
+//- <!-- STARTS -->
+//- +row({
+//- 	col: 2,
+//- 	bg_body: bg_body_2,
+//- 	body_pading_l: body_pading_l,
+//- 	body_pading_r: body_pading_r,
+//- 	body_width: col_body_width,
+//- 	rtl: false,
+//- 	margin_top: '30',
+//- 	margin_top_class: false,
+//- 	margin_bottom: '30',
+//- 	content: {
+//- 		colWidth: td_2_col_width,
+//- 		colPadding: '15px 10px',
+//- 		valing_right: 'top',
+//- 		valing_left: 'top',
+//- 		col2_left: {
+//- 			name: '',
+//- 			arg: {
+
+//- 			}
+//- 		},
+//- 		col2_right: {
+//- 			name: '',
+//- 			arg: {
+
+//- 			}
+//- 		}
+//- 	}
+//- })
+//- <!-- ENDS -->
+
+
+//- Пример с 3 колонками
+
+//- <!-- STARTS -->
+//- +row({
+//- 	col: 3,
+//- 	bg_body: bg_body,
+//- 	body_pading_l: body_pading_l,
+//- 	body_pading_r: body_pading_r,
+//- 	body_width: col_body_width_3,
+//- 	rtl: false,
+//- 	margin_top: '30',
+//- 	margin_top_class: false,
+//- 	margin_bottom: '30',
+//- 	content: {
+//- 		colWidth: td_3_col_width,
+//- 		colPadding: '15px 10px',
+//- 		items: [
+//- 			{	valign: 'top',
+//- 				name: 'r',
+//- 				arg: {
+
+//- 				}
+//- 			},
+//- 			{	valign: 'top',
+//- 				name: '',
+//- 				arg: {
+
+//- 				}
+//- 			},
+//- 			{	valign: 'top',
+//- 				name: '',
+//- 				arg: {
+
+//- 				}
+//- 			}
+//- 		]
+//- 	}
+//- })
+//- <!-- ENDS -->

@@ -1,0 +1,60 @@
+mixin card-gorizontal(data)
+	if data.cardGorizontalOne
+		+row({
+			col: 2,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width,
+			rtl: false,
+			margin_top: mr_lightblue,
+			margin_top_class: false,
+			margin_bottom: false,
+			content: {
+				colWidth: td_2_col_width,
+				colPadding: '10px 10px',
+				valing_right: 'middle',
+				valing_left: 'middle',
+				col2_left: {
+					name: 'img-wraper',
+					arg: {
+						img: 'fashion-product-241-262-01.jpg',
+						alt: 'product',
+						width: 241,
+						height: 262
+					}
+				},
+				col2_right: {
+					name: 'text',
+					arg: [
+						{
+							type: 'text',
+							class: 'h2',
+							text: 'Slim tapper 512 jeans',
+							alignment: 'center'
+						},
+						{
+							type: 'text',
+							class: 'text',
+							text: 'black stretch',
+							alignment: 'center'
+						},
+						{
+							type: 'margin',
+							margin: mr_darkblue
+						},
+						{
+							type: 'content',
+							alignment: 'center',
+							name: 'btn',
+							arg: {
+								link: '#',
+								img: 'fashion-btn-154-48-01.jpg',
+								width: 154,
+								height: 48
+							}
+						}
+					]
+				}
+			}
+		})

@@ -1,0 +1,79 @@
+mixin advantage-list(data)
+	if data.advantageList
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top_class: false,
+			margin_bottom: mr_lightblue,
+			content: {
+				name: 'advantage-item',
+				arg: {
+					advantageItemTitle: 'Our advantage',
+					items: [
+						{
+							advantageItemImg: 'fashion-icon-31-31-number-01.jpg',
+							advantageItemAlt: 'number-01',
+							advantageItemWidth: 31,
+							advantageItemHeight: 31,
+							text: 'Magna nunc donec egestas integer suspendisse hac vel. Viverra non facilisi semper et.'
+						},
+						{
+							advantageItemImg: 'fashion-icon-31-31-number-02.jpg',
+							advantageItemAlt: 'number-02',
+							advantageItemWidth: 31,
+							advantageItemHeight: 31,
+							text: 'Ullamcorper pretium commodo facilisi consectetur. Nulla risus sit quam imperdiet in diam.'
+						},
+						{
+							advantageItemImg: 'fashion-icon-31-31-number-03.jpg',
+							advantageItemAlt: 'number-03',
+							advantageItemWidth: 31,
+							advantageItemHeight: 31,
+							text: 'Tempor sit vulputate euismod imperdiet. Velit nunc, cursus ut at ut sit.'
+						},
+						{
+							advantageItemImg: 'fashion-icon-31-31-number-04.jpg',
+							advantageItemAlt: 'number-04',
+							advantageItemWidth: 31,
+							advantageItemHeight: 31,
+							text: 'Magna facilisis suspendisse purus ipsum sed turpis. Sed egestas accumsan, dui quis nam.'
+						},
+						{
+							advantageItemImg: 'fashion-icon-31-31-number-05.jpg',
+							advantageItemAlt: 'number-05',
+							advantageItemWidth: 31,
+							advantageItemHeight: 31,
+							text: 'Turpis id scelerisque diam, nibh nunc, a. Adipiscing justo, vitae, consequat vitae.'
+						}
+					]
+				}
+			}
+		})
+
+mixin advantage-item(data)
+	table(align="left" border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr 
+			td.text.text--xl.text--black(align='center')!=data.advantageItemTitle
+		tr 
+			+td-margin({height: mr_purpur })
+		tr
+			td(align='left' valign="top")
+				table(align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+					- for (var i = 0; i < data.items.length; i++)
+						tr
+							<!-- ID:IMG IMG  -->
+							td(align='left' width="31" style="padding-right: 18px;" valign="top")
+								+img({
+									img_sm: data.items[i]['advantageItemImg'],
+									alt: data.items[i]['advantageItemAlt'],
+									width: data.items[i]['advantageItemWidth'],
+									height: data.items[i]['advantageItemHeight']
+								})
+								<!-- ID:TXT TEXT  -->
+							td.text(align='left' valign="top")!=data.items[i]['text']
+						tr 
+							+td-margin({height: mr_purpur })

@@ -1,0 +1,97 @@
+.text {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	color: $color-text;
+	text-decoration: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-moz-text-sizeadjust: none;
+	mso-line-height-rule: exactly;
+}
+.text-line {
+	/* 3 Typography */
+	font-size: 16px;
+}
+.text--bold {
+	/* 3 Typography */
+	font-weight: 600;
+}
+.text--no-wrap {
+	/* 2 Block model */
+	display: inline-block;
+
+	/* 3 Typography */
+	white-space: nowrap;
+	word-break: keep-all;
+}
+.text--up {
+	/* 3 Typography */
+	text-transform: uppercase;
+}
+.text--esm {
+	/* 3 Typography */
+	font-size: 11px;
+	line-height: 16px;
+}
+.text--link {
+	/* 3 Typography */
+	font-size: 11px;
+	line-height: 16px;
+}
+.text--sm {
+	/* 3 Typography */
+	font-size: 11px;
+	line-height: 24px;
+}
+.text--btn {
+	/* 3 Typography */
+	font-size: 12px;
+	line-height: 14px;
+}
+.text--lg {
+	/* 3 Typography */
+	font-size: 16px;
+	line-height: 17px;
+}
+.text--xl {
+	/* 3 Typography */
+	font-size: 18px;
+	line-height: 24px;
+}
+// .text--big {
+// 	/* 3 Typography */
+// 	font-size: 56px;
+// 	line-height: 66px;
+// }
+.text--promo {
+	/* 3 Typography */
+	font-size: 56px;
+	line-height: 66px;
+}
+.text--big {
+	/* 3 Typography */
+	font-size: 38px;
+	line-height: 48px;
+}
+.text--brend {
+	/* 3 Typography */
+	color: $color-brend;
+}
+.text--black {
+	/* 3 Typography */
+	color: $color-header;
+}
+.text--white {
+	/* 3 Typography */
+	color: $color-white;
+}
+.text--grey {
+	/* 3 Typography */
+	color: $color-text-grey;
+}

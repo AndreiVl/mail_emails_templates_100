@@ -1,0 +1,18 @@
+mixin title-four(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			<!-- ID:TXT TITLE -->
+			td.h2(align=data.alignment_title)!=data.title
+		tr
+			+td-margin({height: data.margin_title})
+		tr
+			td(align="left")
+				table(align=data.alignment_table border="0" cellpadding="0" cellspacing="0" width=data.table_width)
+					tr
+						<!-- ID:TXT TITLE FOUR CONTENT -->
+						<!-- ID:BR TITLE FIFOUR BR -->
+						td.text.text--sm(align=data.alignment_text style="border-left: " + data.border_style + "; padding-left: " + data.padding_left + "px;")!=data.text
+
+
+//- вызов 
+//- +title-four({title: '', alignment_title: '', margin_title: '', alignment_table: '', table_width: '', alignment_text: '',  border_style: '', padding_left: '', text: ''})

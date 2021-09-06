@@ -1,0 +1,42 @@
+mixin desc-list(data)
+	+row({
+		col: 2,
+		bg_body: bg_body,
+		body_pading_l: nul_pading_l,
+		body_pading_r: nul_pading_r,
+		body_width: col_body_width,
+		rtl: false,
+		alignTd: 'left',
+		margin_top_class: false,
+		margin_bottom: mr_purpur,
+		content: {
+			colWidth: td_2_col_width,
+			colPadding: '10px 10px',
+			valing_right: 'top',
+			valing_left: 'top',
+			col2_left: {
+				name: 'desc-item',
+				arg: {
+					title: 'destination',
+					text: 'Brooklyn Simmons<br>6391 Elgin St. Celina<br>Delaware 10299'
+				}
+			},
+			col2_right: {
+				name: 'desc-item',
+				arg: {
+					title: 'delivery:',
+					text: 'Shipment: 02/10/2020<br>Arrival: 04/10/2020<br>'
+				}
+			}
+		}
+	})
+
+mixin desc-item(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			td.h2.h2--bold(align='left')!=data.title
+		tr
+			+td-margin({height: mr_violet})
+		tr
+			<!-- ID:TXT ELEMENT HEADING -->
+			td.text(align='left')!=data.text

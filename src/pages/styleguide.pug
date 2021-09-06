@@ -1,0 +1,1237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office")
+	include include/head.pug
+	+head('styleguide')
+
+	body()
+		include ../blocks-ui-components/ui-components-mixins.pug			
+		include ../blocks/mixins.pug						
+		<!-- BODY -->
+		table.email(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center")
+					<!-- TEXT STARTS -->
+					+row({
+						col: 1,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: body_width,
+						rtl: false,
+						margin_top: '20',
+						margin_top_class: false,
+						margin_bottom: '20',
+						content: {
+							name: 'text',
+							arg: [
+								{
+									type: 'text',
+									class: 'h1',
+									text: 'ONE',
+									alignment: 'left'
+								},
+								{
+									type: 'margin',
+									margin: 40
+								},
+								{
+									type: 'divider',
+									margin: 20
+								},
+								{
+									type: 'text',
+									class: 'text text--mobile',
+									text: 'dadadadadadadaadad',
+									alignment: 'left'
+								},
+								{
+									type: 'text',
+									class: 'text',
+									text: 'dadadadadadadaadad <a href="#" class="link ">dadaddad</a> adadadad',
+									alignment: 'left'
+								},
+								{
+									type: 'margin',
+									margin: 40
+								},
+								{
+									type: 'divider',
+									margin: 20
+								},
+								{
+									type: 'text',
+									class: 'h2',
+									text: 'TWO',
+									alignment: 'center'
+								}
+							]
+						}
+					})
+					<!-- TEXT ENDS -->
+			tr
+				td(align="center")
+					+banner({
+						name: 'img',
+						arg: {
+							img_big: '680x400/cccccc/ff00ff.png&text=BANNER',
+							alt: '680x400',
+							width: '680',
+							height: '400'
+						}
+					})
+			tr
+				td(align="center")
+					+banner({
+						name: 'img',
+						arg: {
+							link: '#',
+							img_link: '680x350/c3c3c3/ff00ff.png&text=BANNER-LINK',
+							alt: 'BANNER-LINK',
+							width: '680',
+							height: '350'
+						}
+					})
+			tr
+				td(align="center")
+					<!-- TITLE ONE STARTS -->
+					+row({
+						col: 1,
+						bg_body: bg_body,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: body_width,
+						rtl: false,
+						margin_top: '20',
+						margin_top_class: false,
+						margin_bottom: '20',
+						content: {
+							name: 'title-one',
+							arg: {
+								title: 'Awesome Title Style One', 
+								alignment: 'center', 
+								margin_title: '5', 
+								img: '40x3/cccccc/ff00ff.png&text=40', 
+								alt: '40x3', 
+								img_width: '40', 
+								img_height: '3'
+							}
+						}
+					})
+					<!-- TITLE ONE ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE ONE STARTS -->
+					+row({
+						col: 1,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: body_width,
+						rtl: false,
+						margin_top: '25',
+						margin_top_class: false,
+						margin_bottom: '25',
+						content: {
+							name: 'title-one',
+							arg: {
+								title: 'Awesome Title Style Two', 
+								alignment: 'left', 
+								margin_title: '10', 
+								img: '40x3/cccccc/ff00ff.png&text=40', 
+								alt: '40x3', 
+								img_width: '40', 
+								img_height: '3'
+							}
+						}
+					})
+					<!-- TITLE ONE ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE ONE STARTS -->
+					+row({
+						col: 1,
+						bg_body: bg_body,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: body_width,
+						rtl: false,
+						margin_top: '10',
+						margin_top_class: false,
+						margin_bottom: '10',
+						content: {
+							name: 'title-one',
+							arg: {
+								title: 'Awesome Title Style Three', 
+								alignment: 'right', 
+								margin_title: '25', 
+								img: '40x3/cccccc/ff00ff.png&text=40', 
+								alt: '40x3', 
+								img_width: '40', 
+								img_height: '3'
+							}
+						}	
+					})
+					<!-- TITLE ONE ENDS -->
+			tr
+				td(align="center")
+					<!-- IMG TITLE STARTS -->
+					+row({
+						col: 2,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width,
+						rtl: false,
+						margin_top: '30',
+						margin_top_class: false,
+						margin_bottom: '30',
+						content: {
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							valing_right: 'middle',
+							valing_left: 'middle',
+							col2_left: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							col2_right: {
+								name: 'title-one',
+								arg: {
+									title: 'Awesome Title Style Two', 
+									alignment: 'center', 
+									margin_title: '10', 
+									img: '40x3/cccccc/ff00ff.png&text=40', 
+									alt: '40x3', 
+									img_width: '40', 
+									img_height: '3'
+								}
+							}
+						}
+					})
+					<!-- IMG TWO ENDS -->
+			tr
+				td(align="center")
+					<!-- IMG TWO STARTS -->
+					+row({
+						col: 2,
+						bg_body: bg_body,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width,
+						rtl: true,
+						margin_top: '30',
+						margin_top_class: false,
+						margin_bottom: '30',
+						content: {
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							valing_right: 'middle',
+							valing_left: 'middle',
+							col2_left: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							col2_right: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x150/cccccc/ff00ff.png&text=288x150',
+									alt: '288x150',
+									width: '288',
+									height: '150'
+								}
+							}
+						}
+					})
+					<!-- IMG TWO ENDS -->
+			tr
+				td(align="center")
+					<!-- IMG TWO STARTS -->
+					+row({
+						col: 2,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width,
+						rtl: false,
+						margin_top: '30',
+						margin_top_class: false,
+						margin_bottom: '30',
+						content: {
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							valing_right: 'middle',
+							valing_left: 'middle',
+							col2_left: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							col2_right: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x150/cccccc/ff00ff.png&text=288x150',
+									alt: '288x150',
+									width: '288',
+									height: '150'
+								}
+							}
+						}
+					})
+					<!-- IMG TWO ENDS -->
+			tr
+				td(align="center")
+					<!-- IMG THREE STARTS -->
+					+row({
+						col: 3,
+						bg_body: bg_body,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width_3,
+						rtl: false,
+						margin_top: '30',
+						margin_top_class: false,
+						margin_bottom: '30',
+						content: {
+							colWidth: td_3_col_width,
+							colPadding: '15px 10px',
+							items: [
+								{	valign: 'top',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'top',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'top',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								}
+							]
+						}
+					})
+					<!-- IMG THREE ENDS -->
+			tr
+				td(align="center")
+					<!-- IMG SIX STARTS -->
+					+row({
+						col: 3,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width_3,
+						rtl: false,
+						margin_top: '40',
+						margin_top_class: false,
+						margin_bottom: '40',
+						content: {
+							colWidth: td_3_col_width,
+							colPadding: '15px 10px',
+							items: [
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x200/cccccc/ff00ff.png&text=186x200',
+										alt: '186x200',
+										width: '186',
+										height: '200'
+									}
+								},
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x100/cccccc/ff00ff.png&text=186x100',
+										alt: '186x100',
+										width: '186',
+										height: '100'
+									}
+								},
+								{	valign: 'middle',
+									name: 'img-wraper',
+									arg: {
+										img: '186x200/cccccc/ff00ff.png&text=186x200',
+										alt: '186x200',
+										width: '186',
+										height: '200'
+									}
+								}
+							]
+						}
+					})
+					<!-- IMG SIX ENDS -->
+			tr
+				td(align="center")
+					<!-- BLOCK STARTS -->
+					+row({
+						col: 2,
+						bg_body: 'c4c4c4',
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width,
+						rtl: false,
+						margin_top: '35',
+						margin_top_class: false,
+						margin_bottom: '25',
+						content: {
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							valing_right: 'middle',
+							valing_left: 'middle',
+							col2_left: {
+								name: 'title-one',
+								arg: {
+									title: 'Title One', 
+									alignment: 'center',
+									margin_title: '5',
+									img: '80x3/000000/ff00ff.png&text=80x3',
+									alt: '80x3',
+									img_width: '80',
+									img_height: '3'
+								}
+							},
+							col2_right: {
+								name: 'element',
+								arg: {
+									element_width: '288',
+									element_aling: 'center',
+									element_valing: 'top',
+									element_1: {
+										block_bg: bg_body_2,
+										block_margin_top: '15',
+										block_margin_bottom: '15',
+										block_img: '60x60/cccccc/ff00ff.png&text=60x60',
+										block_img_alignment: 'center',
+										block_img_alt: '60x60',
+										block_img_width: '60',
+										block_img_height: '60',
+										block_img_margin: '10',
+										block_link: 'More',
+										block_link_url: '#',
+										block_link_alignment: 'center',
+										block_link_margin: '10',
+										block_text: 'Lorem Lorem Lorem Lorem Lorem',
+										block_text_alignment: 'center'
+									},
+									element_margin: '20',
+									element_2: {
+										block_bg: bg_body_2,
+										block_margin_top: '15',
+										block_margin_bottom: '15',
+										block_img: '40x40/cccccc/ff00ff.png&text=40x40',
+										block_img_alignment: 'center',
+										block_img_alt: '40x40',
+										block_img_width: '40',
+										block_img_height: '40',
+										block_img_margin: '10',
+										block_link: 'Readme',
+										block_link_url: '#',
+										block_link_alignment: 'center',
+										block_link_margin: '10',
+										block_text: 'Lorem Lorem Lorem',
+										block_text_alignment: 'center'
+									}
+								}
+							}
+						}
+					})
+					<!-- BLOCK ENDS -->
+			tr
+				td(align="center")
+					<!-- BLOCK STARTS -->
+					+row({
+						col: 3,
+						bg_body: bg_body_2,
+						body_pading_l: body_pading_l,
+						body_pading_r: body_pading_r,
+						body_width: col_body_width_3,
+						rtl: false,
+						margin_top: '30',
+						margin_top_class: false,
+						margin_bottom: '30',
+						content: {
+							colWidth: td_3_col_width,
+							colPadding: '15px 10px',
+							items: [
+								{	valign: 'top',
+									name: 'element',
+									arg: {
+										element_width: '187',
+										element_aling: 'center',
+										element_valing: 'top',
+										element_1: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '30x30/cccccc/ff00ff.png&text=30x30',
+											block_img_alignment: 'center',
+											block_img_alt: '30x30',
+											block_img_width: '30',
+											block_img_height: '30',
+											block_img_margin: '10',
+											block_link: 'More',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										},
+										element_margin: '20',
+										element_2: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '35x35/cccccc/ff00ff.png&text=35x35',
+											block_img_alignment: 'center',
+											block_img_alt: '35x35',
+											block_img_width: '35',
+											block_img_height: '35',
+											block_img_margin: '10',
+											block_link: 'Readme',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										}
+									}
+								},
+								{	valign: 'top',
+									name: 'element',
+									arg: {
+										element_width: '187',
+										element_aling: 'center',
+										element_valing: 'top',
+										element_1: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '30x30/cccccc/ff00ff.png&text=30x30',
+											block_img_alignment: 'center',
+											block_img_alt: '30x30',
+											block_img_width: '30',
+											block_img_height: '30',
+											block_img_margin: '10',
+											block_link: 'More',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										},
+										element_margin: '20',
+										element_2: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '35x35/cccccc/ff00ff.png&text=35x35',
+											block_img_alignment: 'center',
+											block_img_alt: '35x35',
+											block_img_width: '35',
+											block_img_height: '35',
+											block_img_margin: '10',
+											block_link: 'Readme',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										}
+									}
+								},
+								{	valign: 'top',
+									name: 'element',
+									arg: {
+										element_width: '187',
+										element_aling: 'center',
+										element_valing: 'top',
+										element_1: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '30x30/cccccc/ff00ff.png&text=30x30',
+											block_img_alignment: 'center',
+											block_img_alt: '30x30',
+											block_img_width: '30',
+											block_img_height: '30',
+											block_img_margin: '10',
+											block_link: 'More',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										},
+										element_margin: '20',
+										element_2: {
+											block_bg: bg_body,
+											block_margin_top: '15',
+											block_margin_bottom: '15',
+											block_img: '35x35/cccccc/ff00ff.png&text=35x35',
+											block_img_alignment: 'center',
+											block_img_alt: '35x35',
+											block_img_width: '35',
+											block_img_height: '35',
+											block_img_margin: '10',
+											block_link: 'Readme',
+											block_link_url: '#',
+											block_link_alignment: 'center',
+											block_link_margin: '10',
+											block_text: 'Lorem Lorem Lorem',
+											block_text_alignment: 'center'
+										}
+									}
+								}
+							]
+						}
+					})
+					<!-- BLOCK ENDS -->
+				tr
+					td(align="center")
+						+row({
+							col: 1,
+							bg_body: bg_body,
+							body_pading_l: body_pading_l,
+							body_pading_r: body_pading_r,
+							body_width: body_width,
+							rtl: false,
+							margin_top: '20',
+							margin_top_class: false,
+							margin_bottom: '20',
+							content: {
+								name: 'viewbrowser',
+								arg: {
+									link: '{webversion}',
+									link_url: '#'
+								}
+							}
+						})
+			tr
+				td(align="center")
+					include ../blocks-grid/02-menu-1/02-menu-1.pug
+			tr
+				td(align="center")
+					include ../blocks-grid/03-menu-2/03-menu-2.pug
+			tr
+				td(align="center")
+					include ../blocks-grid/04-menu-3/04-menu-3.pug
+			tr
+				td(align="center")
+					include ../blocks-grid/05-menu-4/05-menu-4.pug
+			tr
+				td(align="center")
+					<!-- TITLE ONE STARTS -->
+					+column-1({
+						grid: {
+							bg_body: bg_body_2,
+							margin_top: '40',
+							margin_bottom: '20',
+							},
+							center: {
+								name: 'title-one',
+								arg: {
+									title: 'Awesome Title Style One', 
+									alignment: 'center', 
+									margin_title: '5', 
+									img: '40x3/cccccc/ff00ff.png&text=40', 
+									alt: '40x3', 
+									img_width: '40', 
+									img_height: '3'
+								}
+							}
+					})
+					<!-- TITLE ONE ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE TWO STARTS -->
+					+column-1({
+						grid: {
+							bg_body: bg_body,
+							margin_top: '40',
+							margin_bottom: '20',
+							},
+						center: {
+							name: 'title-two',
+							arg: {
+								title: 'Awesome Title Style Two',
+								alignment: 'center',
+								margin_title: '5',
+								subtitle: 'subtitle content'
+							}
+						}
+					})
+					<!-- TITLE TWO ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE THREE STARTS -->
+					+column-1({
+						grid: {
+							bg_body: bg_body_2,
+							margin_top: '40',
+							margin_bottom: '20',
+							},
+						center: {
+							name: 'title-three',
+							arg: {
+								title: 'Awesome Title Style Three', 
+								alignment: 'center', 
+								margin_title: '5', 
+								img: '40x3/cccccc/ff00ff.png&text=40', 
+								alt: '40x3', 
+								img_width: '40', 
+								img_height: '3'
+							}
+						}
+					})
+					<!-- TITLE THREE ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE FOUR STARTS -->
+					+column-1({
+						grid: {
+							bg_body: bg_body,
+							margin_top: '40',
+							margin_bottom: '20',
+							},
+							center: {
+							name: 'title-one',
+							arg: {
+								title: 'Awesome Title Style Four', 
+								alignment: 'left', 
+								margin_title: '5', 
+								img: '40x3/cccccc/ff00ff.png&text=40', 
+								alt: '40x3', 
+								img_width: '40', 
+								img_height: '3'
+							}
+						}
+					})
+					<!-- TITLE FOUR ENDS -->
+			tr
+				td(align="center")
+					<!-- TITLE FIVE STARTS -->
+					+column-1({
+						grid: {
+							bg_body: bg_body_2,
+							margin_top: '40',
+							margin_bottom: '20',
+							},
+						center: {
+							name: 'title-four',
+							arg: {
+								title: 'Awesome Title Style Five', 
+								alignment_title: 'left',
+								margin_title: '5',
+								alignment_table: 'left',
+								table_width: '60%',
+								alignment_text: 'left',
+								border_style: '1px solid #cccccc;',
+								padding_left: '15',
+								text: 'Donec varius sodales orci. Class aptent inceptos aptent taciti sociosqu ad litora'
+							}
+						}
+					})
+					<!-- TITLE FIVE ENDS -->
+			tr
+				td(align="center")
+					<!-- HEADER-1 STARTS -->
+					+header-bg({
+						bgcolor: bg_body,
+						bg_img: '680x617/cccccc/ff00ff.png&text=680x617',
+						bg_width: '680',
+						bg_height: '617',
+						padding_left: '5.5%',
+						padding_right: '5.5%',
+						margin_top: '200',
+						margin_bottom: '200',
+						width_col_IE: '365',
+						width_col_IE_end: '235',
+						width_col_div: '345',
+						alignment_title: 'left',
+						margin_title: '15',
+						alignment_text: 'left',
+						margin_text: '20',
+						alignment_btn: 'left',
+						title: 'This is Something Attractive',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula eget molestie accumsan amet ligula cursus ',
+						link: '#',
+						img_btn: '117x31/000000/ff00ff.png&text=117x31',
+						width_btn: '117',
+						height_btn: '31'
+					})
+					<!-- HEADER-1 ENDS -->
+			tr
+				td(align="center")
+					<!-- HEADER-2 STARTS -->
+					+header-bg({
+						bgcolor: bg_body,
+						bg_img: '680x617/ffffff/ff00ff.png&text=680x617',
+						bg_width: '680',
+						bg_height: '550',
+						padding_left: '5.5%',
+						padding_right: '5.5%',
+						margin_top: '200',
+						margin_bottom: '200',
+						width_col_IE: '600',
+						width_col_div: '600',
+						alignment_title: 'center',
+						margin_title: '15',
+						alignment_text: 'center',
+						margin_text: '20',
+						alignment_btn: 'center',
+						title: 'This is Something Attractive',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula eget molestie accumsan amet ligula cursus ',
+						link: '#',
+						img_btn: '117x31/000000/ff00ff.png&text=117x31',
+						width_btn: '117',
+						height_btn: '31'
+					})
+					<!-- HEADER-2 ENDS -->
+			tr
+				td(align="center")
+					<!-- HEADER-3 STARTS -->
+					+header-bg-2({
+						bgcolor: "#000000",
+						bg_img: '680x617/000000/ff00ff.png&text=680x617',
+						bg_width: '680',
+						bg_height: '550',
+						padding_left: '5.5%',
+						padding_right: '5.5%',
+						margin_top: '200',
+						margin_bottom: '200',
+						width_col_IE_start: '215',
+						width_col_IE: '385',
+						width_col_div: '365',
+						alignment_title: 'left',
+						margin_title: '15',
+						alignment_text: 'left',
+						margin_text: '20',
+						alignment_btn: 'left',
+						title: 'This is Something Attractive',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula eget molestie accumsan amet ligula cursus ',
+						link: '#',
+						img_btn: '117x31/cccccc/ff00ff.png&text=117x31',
+						width_btn: '117',
+						height_btn: '31'
+					})
+					<!-- HEADER-3 ENDS -->
+			tr
+				td(align="center")
+					+about-us({
+						margin_top: '45',
+						margin_bottom: '45',
+						img: '252x240/cccccc/ff00ff.png&text=252x240',
+						img_alt: '252x240',
+						img_width: '252',
+						img_height: '240',
+						alignment_title: 'left',
+						title: 'About Us',
+						margin_title: '20',
+						alignment_text_1: 'left',
+						text_1: 'Lorem Ipsum sodales orci. Class nostr inceptos himenaeos',
+						margin_text_1: '18',
+						alignment_text_2: 'left',
+						text_2: 'Lorem Ipsum sodales orci. Class nostr inceptos himenaeos',
+						margin_text_2: '23',
+						btn_1_url: '#',
+						btn_1_img: '117x31/cccccc/ff00ff.png&text=117x31',
+						btn_1_width: '117',
+						btn_1_height: '31',
+						btn_2_url: '#',
+						btn_2_img: '117x31/cccccc/ff00ff.png&text=117x31',
+						btn_2_width: '117',
+						btn_2_height: '31'
+					})
+			tr
+				td(align="center")
+					+awesome-features({
+						margin_top: '60',
+						margin_bottom: '60',
+						alignment_title: 'center',
+						title_margin_top: '30',
+						title: 'Awesome Features',
+						title_margin_bottom: '15',
+						title_margin_footer: '15',
+						img: '40x3/cccccc/ff00ff.png&text=40x3',
+						img_alt: '40x3',
+						img_width: '40',
+						img_height: '3',
+						img_margin: '13',
+						alignment_text: 'left',
+						text: 'Lorem Ipsum sodales orci. Class aptent taciti sociosqu ad litora torquent per himenaeos.',
+						text_margin: '15',
+						alignment_link: 'left',
+						url_link: '#',
+						link: 'READ MORE',
+						img_2: '40x3/cccccc/ff00ff.png&text=40x3',
+						img_2_alt: '40x3',
+						img_2_width: '40',
+						img_2_height: '3',
+						img_2_margin: '13',
+						alignment_text_2: 'left',
+						text_2: 'Lorem Ipsum sodales orci. Class aptent taciti sociosqu ad litora torquent per himenaeos.',
+						text_2_margin: '15',
+						alignment_link_2: 'left',
+						url_link_2: '#',
+						link_2: 'READ MORE'
+					})
+			tr
+				td(align="center")
+					+creative-design({
+						margin_top: '60',
+						margin_bottom: '55',
+						title: 'Creative Design <br> For Your Email Campaign',
+						title_alignment: 'left',
+						title_margin: '15',
+						column_2_grid: {
+							grid: {
+								rowWidth: col_body_width,
+								colWidth: td_2_col_width,
+								colPadding: '15px 10px',
+								bg_body: bg_body,
+								pading_l: body_pading_l,
+								pading_r: body_pading_r,
+								margin_top: '0',
+								margin_bottom: '0',
+								rtl: false, 
+								valing_1: 'top',
+								valing_2: 'top'
+							},
+							left: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							right: {
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							}
+						},
+						img: '40x3/cccccc/ff00ff.png&text=40x3',
+						img_alt: '40x3',
+						img_width: '40',
+						img_height: '3',
+						img_margin: '13',
+						text: 'Lorem Ipsum sodalesorci. Class aptent socioqu litora sociosqu ad nostra, inceptos conubia litora sociosqu nostra, inceptos taciti sociosqu. Donec varius sodales orci sociosqu ad litora nostra torquent per taciti nostra, inceptos',
+						text_alignment: 'left',
+						text_margin: '20',
+						btn_link: '#',
+						btn_alignment: 'left',
+						btn_img: '108x41/cccccc/ff00ff.png&text=108x41',
+						btn_width: '108',
+						btn_height: '41'
+					})
+			tr
+				td(align="center")
+					+column-2({
+						grid: {
+							rowWidth: col_body_width,
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							bg_body: bg_body_2,
+							pading_l: body_pading_l,
+							pading_r: body_pading_r,
+							margin_top: '45',
+							margin_bottom: '45',
+							rtl: true, 
+							valing_1: 'top',
+							valing_2: 'top'
+						},
+						left: {
+							name: 'img-wraper',
+							arg: {
+								img: '288x255/cccccc/ff00ff.png&text=288x255',
+								alt: '288x255',
+								width: '288',
+								height: '255'
+							}
+						},
+						right: {
+							name: 'card-img',
+							arg: {
+								img_1: '80x80/cccccc/ff00ff.png&text=80x80',
+								img_1_alt: '80x80',
+								img_1_width: '80',
+								img_1_height: '80',
+								img_1_margin: '17',
+								img_2: '40x3/cccccc/ff00ff.png&text=40x3',
+								img_2_alt: '40x3',
+								img_2_width: '40',
+								img_2_height: '3',
+								img_2_margin: '13',
+								text: 'Lorem Ipsum sodales orci. Class aptent taciti sociosqu ad litora',
+								text_alignment: 'left',
+								text_margin: '23',
+								link: 'READ MORE',
+								link_alignment: 'left',
+								link_url: '#'
+							}
+						}
+					})
+			tr
+				td(align="center")
+					+column-3({
+						grid: {
+							rowWidth: col_body_width_3,
+							colWidth: td_3_col_width,
+							colPadding: '15px 10px',
+							bg_body: bg_body,
+							margin_top: '45',
+							margin_bottom: '45',
+							pading_l: body_pading_l,
+							pading_r: body_pading_r,
+						},
+						items: [
+							{	valign: 'top',
+								name: 'element',
+								arg: {
+									element_width: '186',
+									element_aling: 'center',
+									element_valing: 'top',
+									element_1: {
+										block_bg: bg_body_2,
+										block_margin_top: '30',
+										block_margin_bottom: '30',
+										block_img: '40x40/cccccc/ff00ff.png&text=40x40',
+										block_img_alignment: 'center',
+										block_img_alt: '40x40',
+										block_img_width: '40',
+										block_img_height: '40',
+										block_img_margin: '15',
+										block_link: 'Elements',
+										block_link_alignment: 'center',
+										block_link_margin: '4',
+										block_text: 'Lorem Ipsum sodales Class per taciti aptent',
+										block_text_alignment: 'center'
+									},
+									element_margin: '20',
+									element_2: {
+										block_bg: bg_body_2,
+										block_margin_top: '30',
+										block_margin_bottom: '30',
+										block_img: '40x40/cccccc/ff00ff.png&text=40x40',
+										block_img_alignment: 'center',
+										block_img_alt: '40x40',
+										block_img_width: '40',
+										block_img_height: '40',
+										block_img_margin: '15',
+										block_link: 'Colors',
+										block_link_alignment: 'center',
+										block_link_margin: '4',
+										block_text: 'Lorem Ipsum sodales Class per taciti aptent',
+										block_text_alignment: 'center'
+										}
+								}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '186x360/cccccc/ff00ff.png&text=186x360',
+									alt: '186x360',
+									width: '186',
+									height: '360'
+									}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '186x360/cccccc/ff00ff.png&text=186x360',
+									alt: '186x360',
+									width: '186',
+									height: '360'
+									}
+							}
+						]
+					})
+			tr
+				td(align="center")
+					+column-3({
+						grid: {
+							rowWidth: col_body_width,
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							bg_body: bg_body_2,
+							margin_top: '45',
+							margin_bottom: '45',
+							pading_l: body_pading_l,
+							pading_r: body_pading_r,
+						},
+						items: [
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							}
+						]
+					})
+			tr
+				td(align="center")
+					+column-3({
+						grid: {
+							rowWidth: col_body_width,
+							colWidth: td_2_col_width,
+							colPadding: '15px 10px',
+							bg_body: bg_body,
+							margin_top: '45',
+							margin_bottom: '45',
+							pading_l: body_pading_l,
+							pading_r: body_pading_r,
+						},
+						items: [
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '288x255/cccccc/ff00ff.png&text=288x255',
+									alt: '288x255',
+									width: '288',
+									height: '255'
+								}
+							}
+						]
+					})
+			tr
+				td(align="center")
+					+column-3({
+						grid: {
+							rowWidth: col_body_width_3,
+							colWidth: td_3_col_width,
+							colPadding: '15px 10px',
+							bg_body: bg_body_2,
+							margin_top: '45',
+							margin_bottom: '45',
+							pading_l: body_pading_l,
+							pading_r: body_pading_r,
+						},
+						items: [
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '186x360/cccccc/ff00ff.png&text=186x360',
+									alt: '186x360',
+									width: '186',
+									height: '360'
+									}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '186x360/cccccc/ff00ff.png&text=186x360',
+									alt: '186x360',
+									width: '186',
+									height: '360'
+									}
+							},
+							{	valign: 'top',
+								name: 'img-wraper',
+								arg: {
+									img: '186x360/cccccc/ff00ff.png&text=186x360',
+									alt: '186x360',
+									width: '186',
+									height: '360'
+									}
+							}
+						]
+					})
+	//- tr
+	//- 	td(align="center")
+	//- 		+column-2({
+	//- 			grid: {
+	//- 				mr_t: '45',
+	//- 				valing: 'bottom'
+	//- 			},
+	//- 			left: {
+	//- 				name: 'btn',
+	//- 				arg: {link: '#', img: '200x50/cccccc/ff00ff.png&text=200x50', width: '200', height: '50'}
+	//- 			},
+	//- 			right: {
+	//- 				name: 'img',
+	//- 				arg: {img_big: '272x272/cccccc/ff00ff.png&text=272x272', alt: '272x272', width: '272' , height: '272'}
+	//- 			}
+	//- 		})
+	<!-- /BODY -->

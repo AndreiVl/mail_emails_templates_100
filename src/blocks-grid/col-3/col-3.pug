@@ -1,0 +1,51 @@
+mixin col3(data)
+	+IE({col: 2, width_col: data.colWidth, align: 'center', valign: 'top'})
+	- for (var i = data.items.length; i > 0; i--)
+		- var j = data.items.length - i;
+
+		<!-- BLOCK -->
+		+col3_block({
+			valign: data.items[j]['valign'],
+			colWidth: data.colWidth,
+			name: data.items[j]['name'],
+			arg: data.items[j]['arg'],
+			padding: data.colPadding
+		})
+
+		if i == 1 
+			|!{IE_TABLE_END}
+		else 
+			if j == 2 || j == 5 || j == 8 || j == 11 || j == 14 || j == 17
+				+IE({col_td: 3, width_col: data.colWidth, align: 'center', valign: 'top'})
+			else 
+				+IE({col_td: 2, width_col: data.colWidth, align: 'center', valign: 'top'})
+
+mixin col3_block(data)
+	div(style="display: inline-block; width:100%; max-width: " + data.colWidth + "px; vertical-align: " + data.valign + ";")
+		table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center" style="padding: " + data.padding +";")
+					+#{data.name}(data.arg)
+
+//- Вызов
+//- +col3({
+//- 	colWidth: '',
+//- 	colPadding: '',
+//- 	items: [
+//- 		{	valign: '',
+//- 			name: '',
+//- 			arg: {
+//- 				}
+//- 		},
+//- 		{	valign: '',
+//- 			name: '',
+//- 			arg: {
+//- 				}
+//- 		},
+//- 		{	valign: 'top',
+//- 			name: '',
+//- 			arg: {
+//- 				}
+//- 		}
+//- 	]
+//- })

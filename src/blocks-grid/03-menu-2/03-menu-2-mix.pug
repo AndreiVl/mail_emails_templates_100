@@ -1,0 +1,68 @@
+mixin menu-2-mix(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 100%;")
+		tr
+			td(align="center" style="font-size:0; width:100%; max-width:100%;")
+				+IE({col: 2, width_col: data.leftWidth, align: 'center', valign: 'top'})
+				div(style="display: inline-block;  width: 100%; max-width: " + data.leftWidth + "px; vertical-align: top;")
+					<!--TABLE LEFT-->
+					table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							td(align="center")
+								table.table-important(align="center" border="0" cellpadding="0" cellspacing="0")
+									tr
+										<!-- ID:TXT MENU-2 -->
+										td(align="center" width=data.leftWidth)
+											+#{data.leftContent.name}(data.leftContent.arg)
+
+				+IE({col_td: 2, width_col: data.rightWidth, align: 'center', valign: 'top'})
+				div(style="display: inline-block; width: 100%; max-width: " + data.rightWidth + "px; vertical-align: top;")
+					table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							td(align="center" style="font-size: 0;")
+								+IE({col: 2, width_col: data.rightWidthIe, align: 'center', valign: 'top'})
+								div(style="display:inline-block; width: 100%; max-width: " + data.rightWidthDiv + "px; vertical-align: top;")
+									table(align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: " + data.rightWidthTable + "px;border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;")
+										tr
+											td(width="100%" style="font-size: 0;")
+												|&nbsp;
+								+IE({col_td: 2, width_col: data.rightWidthIe2, align: 'center', valign: 'top'})
+								div(style="display: inline-block; width: 100%; max-width: " + data.rightWidthDiv2 + "px; vertical-align: top;")
+									<!--TABLE RIGHT-->
+									table.table-after-div(align="right" border="0" cellpadding="0" cellspacing="0" width="100%")
+										tr
+											td(align="center" style="font-size: 0;")
+												table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+													tr
+														td(align="center")
+															table.table-important(align="center" border="0" width="100%" cellpadding="0" cellspacing="0")
+																tr
+																	+td-margin({height: data.rigthHeight})
+																tr
+																	td(align="center")
+																		+#{data.rightContent.name}(data.rightContent.arg)
+																tr
+																	+td-margin({height: data.rigthHeight})
+								|!{IE_TABLE_END}
+				|!{IE_TABLE_END}
+
+//- +menu-2-mix({
+//- 	leftWidth: '',
+//- 	rightWidth: '',
+//- 	rightWidthIe: '',
+//-   rightWidthDiv: '',
+//- 	rightWidthTable: '',
+//- 	rightWidthIe2: '',
+//- 	rightWidthDiv2: '',
+//- 	leftContent: {
+//- 		name: '',
+//- 		arg: {
+
+//- 		}
+//- 	},
+//- 	rightContent: {
+//- 		name: '',
+//- 		arg: {
+
+//- 		}
+//- 	}
+//- })

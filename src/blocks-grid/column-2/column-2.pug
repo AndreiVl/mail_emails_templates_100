@@ -1,0 +1,118 @@
+mixin column-2(data)
+	+IE({width: table_width ,align: 'center', valign: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION-2 -->
+		table(align="center" bgcolor=data.grid.bg_body border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="padding-left: " + data.grid.pading_l + "px; padding-right: " + data.grid.pading_r + "px;")
+					+IE({width: data.grid.rowWidth ,align: 'center', valign: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + data.grid.rowWidth + "px; vertical-align: top;")
+						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + data.grid.rowWidth + "px;")
+							tr
+								+td-margin({height: data.grid.margin_top})
+							tr
+								if data.grid.rtl
+									td(align="center" dir="rtl" style="font-size: 0;")
+										+IE({col: 2, width_col: data.grid.colWidth, align: 'center', valign: 'top'})
+										<!-- BLOCK RIGHT -->
+										+block({
+											valign: data.grid.valing_1,
+											colWidth: data.grid.colWidth,
+											name: data.left.name,
+											arg: data.left.arg,
+											padding: data.grid.colPadding
+										})
+
+										+IE({col_td: 2, width_col: data.grid.colWidth, align: 'left', valign: 'top'})
+										<!-- BLOCK LEFT -->
+										+block({
+											valign: data.grid.valing_2,
+											colWidth: data.grid.colWidth,
+											name: data.right.name,
+											arg: data.right.arg,
+											padding: data.grid.colPadding
+										})
+										|!{IE_TABLE_END}
+
+								else
+									td(align="center" style="font-size: 0;")
+										+IE({col: 2, width_col: data.grid.colWidth, align: 'center', valign: 'top'})
+										<!-- BLOCK LEFT -->
+										+block({
+											valign: data.grid.valing_1,
+											colWidth: data.grid.colWidth,
+											name: data.left.name,
+											arg: data.left.arg,
+											padding: data.grid.colPadding
+										})
+
+										+IE({col_td: 2, width_col: data.grid.colWidth, align: 'left', valign: 'top'})
+										<!-- BLOCK RIGHT -->
+										+block({
+											valign: data.grid.valing_2,
+											colWidth: data.grid.colWidth,
+											name: data.right.name,
+											arg: data.right.arg,
+											padding: data.grid.colPadding
+										})
+										|!{IE_TABLE_END}
+							tr
+								+td-margin({height: data.grid.margin_bottom})
+					|!{IE_TABLE_END}
+	|!{IE_TABLE_END}
+
+mixin block(data)
+	div(style="display: inline-block; width:100%; max-width: " + data.colWidth + "px; vertical-align: " + data.valign + ";")
+		table.table-after-div(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center" style="padding: " + data.padding +";")
+					+#{data.name}(data.arg)
+
+//- Вызов. Grid  параметры сетки. Блок left, right(колонка слева-справа) - передаем в name название миксинов, в arg параметры мискинов.
+//- +column-2({
+//- 	grid: {
+//- 		rowWidth: 600,
+//- 		colWidth: 300,
+//- 		colPadding: '',
+//- 		bg_body: '',
+//- 		margin_top: '',
+//- 		margin_bottom: '',
+//- 		pading_l: '',
+//- 		pading_r: '',
+//- 		rtl: false, 
+//- 		valing_1: '',
+//- 		valing_2: ''
+//- 	},
+//- 	left: {
+//- 		name: '',
+//- 		arg: {}
+//- 	},
+//- 	right: {
+//- 		name: '',
+//- 		arg: {}
+//- 	}
+//- })
+
+//- +column-2({
+//- 	grid: {
+//- 		rowWidth: col_body_width,
+//- 		colWidth: td_2_col_width,
+//- 		colPadding: '15px 10px',
+//- 		bg_body: '',
+//- 		margin_top: '',
+//- 		margin_bottom: '',
+//- 		pading_l: '',
+//- 		pading_r: '',
+//- 		rtl: false, 
+//- 		valing_1: '',
+//- 		valing_2: ''
+//- 	},
+//- 	left: {
+//- 		name: '',
+//- 		arg: {}
+//- 	},
+//- 	right: {
+//- 		name: '',
+//- 		arg: {}
+//- 	}
+//- })

@@ -1,0 +1,45 @@
+mixin cta-two(data)
+	+row({
+		col: 1,
+		bg_body: bg_body_3,
+		body_pading_l: body_pading_l,
+		body_pading_r: body_pading_r,
+		body_width: body_width,
+		rtl: false,
+		alignTd: 'left',
+		margin_top: mr_mediumblue,
+		margin_bottom: mr_mediumblue,
+		content: {
+			name: 'cta-two-body',
+			arg: {
+				ctaTwoBodyWidthRight: 335,
+				ctaTwoBodyValingRight: 'left',
+				ctaTwoBodyText: 'The most popular products of this year according to buyers',
+				ctaTwoBodyWidthLeft: 165,
+				ctaTwoBodyValingLeft: 'left',
+				name : 'btn',
+				arg: {
+					link: '#',
+					img: 'fashion-btn-165-48-01.png',
+					width: 165,
+					height: 48
+				}
+			}
+		}
+	})
+
+mixin cta-two-body(data)
+	+IE({col: 2, width_col: data.ctaTwoBodyWidthRight, align: 'left', valign: data.ctaTwoBodyValingRight})
+	<!-- BLOCK RIGHT -->
+	div(style="display: inline-block; width:100%; max-width: " + data.ctaTwoBodyWidthRight + "px; vertical-align: " + data.ctaTwoBodyValingRight + ";")
+		table.table-after-div(align="left" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td.text.text--xl.text--black(align="left" style="padding: 5px 10px 5px 0px;")!=data.ctaTwoBodyText
+
+	+IE({col_td: 2, width_col: data.ctaTwoBodyWidthLeft, align: 'left', valign: data.ctaTwoBodyValingLeft})
+	div(style="display: inline-block; width:100%; max-width: " + data.ctaTwoBodyWidthLeft + "px; vertical-align: " + data.ctaTwoBodyValingLeft + ";")
+		table.table-after-div(align="left" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="left" style="padding: 5px 0px 5px 0px;")
+					+#{data.name}(data.arg)
+	|!{IE_TABLE_END}

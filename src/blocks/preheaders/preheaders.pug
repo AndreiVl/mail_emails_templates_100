@@ -1,0 +1,47 @@
+mixin preheaders(data)
+	if data.preheaders1
+		+row({
+			col: 1,
+			bg_body: bg_body_2,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_darkblue,
+			margin_bottom: mr_darkblue,
+			content: {
+				name: 'preheadersContent',
+				arg: {
+					linkUrl: '#',
+					linkText: 'View in your browser'
+				}
+			}
+		})
+
+	if data.preheaders2
+		+row({
+			col: 1,
+			bg_body: bg_body_2,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_mediumblue,
+			margin_bottom: mr_mediumblue,
+			content: {
+				name: 'preheadersContent',
+				arg: {
+					linkTelUrl: '#',
+					linkTel: 'View in your browser',
+				}
+			}
+		})
+
+mixin preheadersContent(data)
+	table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;")
+		tr
+			td.text.text--esm(align="left")
+				a.link.link--text.link--no-decor(href=data.linkTelUrl)!=data.linkTel
+			td.text.text--esm(align="right")
+				a.link.link--text.link--no-decor(href=data.linkUrl target="_blank")!=data.linkText
+

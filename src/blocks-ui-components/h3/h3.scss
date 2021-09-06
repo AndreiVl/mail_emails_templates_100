@@ -1,0 +1,22 @@
+.h3 {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 17px;
+	color: $color-h3;
+	text-decoration: none;
+	mso-line-height-rule: exactly;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-moz-text-sizeadjust: none;
+}
+.h3--big {
+	/* 3 Typography */
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 43.2px;
+}

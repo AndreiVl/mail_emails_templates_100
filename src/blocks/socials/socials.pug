@@ -1,0 +1,65 @@
+mixin socials(data)
+	if data.changeList
+		- var changeList=data.changeList
+	else
+		-
+			var changeList = [
+				{
+					type: 'icon',
+					iconLink: '#',
+					iconImg: 'templates-100-socila-46-inst.png',
+					iconWidth: 46,
+					iconHeight: 46
+				},
+				{
+					type: 'margirn',
+					margirnWidth: 18
+				},
+				{
+					type: 'icon',
+					iconLink: '#',
+					iconImg: 'templates-100-socila-46-fb.png',
+					iconWidth: 46,
+					iconHeight: 46
+				},
+				{
+					type: 'margirn',
+					margirnWidth: 18
+				},
+				{
+					type: 'icon',
+					iconLink: '#',
+					iconImg: 'templates-100-socila-46-tw.png',
+					iconWidth: 46,
+					iconHeight: 46
+				},
+				{
+					type: 'margirn',
+					margirnWidth: 18
+				},
+				{
+					type: 'icon',
+					iconLink: '#',
+					iconImg: 'templates-100-socila-46-youtube.png',
+					iconWidth: 46,
+					iconHeight: 47
+				}
+			]
+	if data.social
+		+row({
+			col: 1,
+			alignTd: 'center',
+			bg_body: bg_table,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_bottom: mr_purpur,
+			content: {
+				name: 'social',
+				arg: {
+					alignment: 'center',
+					items: changeList
+				}
+			}
+		})

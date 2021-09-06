@@ -1,0 +1,22 @@
+mixin header(data)
+	if data.header1
+		+row({
+			col: 1,
+			bg_body: bg_body_3,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_mediumblue,
+			margin_bottom: mr_mediumblue,
+			content: {
+				name: 'img',
+				arg: {
+					link: '#',
+					img_link: 'templates-100-logo-177-37-01.jpg',
+					alt: 'Logo',
+					width: 81,
+					height: 37
+				}
+			}
+		})

@@ -1,0 +1,30 @@
+mixin img(data)
+	if data.img_big
+		img(src=image_path+data.img_big alt=data.alt width=data.width height=data.height style="display: block; width: 100%; max-width: " + data.width + "px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+	if data.img_sm
+		img(src=image_path+data.img_sm alt=data.alt width=data.width height=data.height style="display: block; margin: 0; border: 0; padding: 0; outline: none;")
+	if data.img_link
+		a(href=data.link target="_blank" style="display: inline-block; text-decoration: none;")
+			img(src=image_path+data.img_link border="0" alt="btn"  width=data.width height=data.height style="display: block; width: 100%; max-width: " + data.width + "px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+
+//- вызов
+//- +img({
+//- 	img_big: '', 
+//- 	alt: '',
+//- 	width: '',
+//- 	height: ''
+//- })
+//- +img({
+//- 	img_sm: '',
+//- 	alt: '',
+//- 	width: '',
+//- 	height: ''
+//- })
+//- +img({
+//- 	link: '',
+//- 	img_link: '',
+//- 	alt: '',
+//- 	width: '',
+//- 	height: ''
+//- })
+//- 40x3/cccccc/ff00ff.png&text=40x3

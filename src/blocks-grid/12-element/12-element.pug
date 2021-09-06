@@ -1,0 +1,74 @@
+mixin element(data)
+	<!-- ELEMENT STARTS -->
+	+IE({col: 2, width_col: data.element_width, aling: data.element_aling, valing: data.element_valing})
+	div(style="display: inline-block; width:100%; max-width: " + data.element_width + "px; vertical-align: top;")
+		table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+			tr
+				td(align="center")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							td.text(align="center")
+								<!-- ID:ELEMENTS -->
+								+block-element(data.element_1)
+						tr
+							+td-margin({height: data.element_margin})
+						tr
+							td.text(align="center")
+								<!-- ID:ELEMENTS -->
+								+block-element(data.element_2)
+	|!{IE_TABLE_END}
+	<!-- ELEMENT ENDS -->
+
+mixin block-element(data)
+	<!-- ELEMENT-BLOCK -->
+	table.table-after-div(align="center" bgcolor=data.block_bg border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			+td-margin({height: data.block_margin_top})
+		tr
+			td(align=data.block_img_alignment style="line-height: 0px;" width=data.block_img_width)
+				+img({img_sm: data.block_img, alt: data.block_img_alt , width: data.block_img_width , height: data.block_img_height})
+		tr
+			+td-margin({height: data.block_img_margin})
+		tr
+			<!-- ID:TXT ELEMENT HEADING -->
+			td.text.text--sm(align=data.block_link_alignment)
+				a.link(href=data.block_link_url)!=data.block_link
+		tr
+			+td-margin({height: data.block_link_margin})
+		tr
+			td(align="center")
+				table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+					tr
+						<!-- ID:TXT ELEMENT CONTENT -->
+						td.text.text--sm(align=data.block_text_alignment)!=data.block_text
+		tr
+			+td-margin({height: data.block_margin_bottom})
+	<!-- ELEMENT-BLOCK ENDS -->
+//- вызовы
+
+//- +element({
+//- 	element_width: '',
+//- 	element_aling: '',
+//- 	element_valing: '',
+//- 	element_1: {},
+//- 	element_margin: '',
+//- 	element_2: {}
+//- })
+
+//- +block({
+//- 	block_bg: '',
+//- 	block_margin_top: '',
+//- 	block_margin_bottom: '',
+//- 	block_img: '',
+//- 	block_img_alignment: '',
+//- 	block_img_alt: '',
+//- 	block_img_width: '',
+//- 	block_img_height: '',
+//- 	block_img_margin: '',
+//- 	block_link: '',
+//- 	block_link_url: '',
+//- 	block_link_alignment: '',
+//- 	block_link_margin: '',
+//- 	block_text: '',
+//- 	block_text_alignment: ''
+//- })

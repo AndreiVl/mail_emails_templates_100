@@ -1,0 +1,263 @@
+mixin card-gorizontal-list(data)
+	tr
+		td(align="center")
+			//- NORMAL
+			+row({
+				col: 2,
+				bg_body: bg_body,
+				body_pading_l: body_pading_l,
+				body_pading_r: body_pading_r,
+				body_width: col_body_width,
+				rtl: false,
+				margin_top: false,
+				margin_top_class: false,
+				margin_bottom: false,
+				content: {
+					colWidth: td_2_col_width,
+					colPadding: '10px 10px',
+					valing_right: 'middle',
+					valing_left: 'middle',
+					col2_left: {
+						name: 'img-wraper',
+						arg: {
+							img: '8marth-img-card-220-220-03.jpg',
+							alt: 'cosmetics',
+							width: '220',
+							height: '220'
+						}
+					},
+					col2_right: {
+						name: 'text',
+						arg: [
+							{
+								type: 'text',
+								class: 'h2',
+								text: 'Intense Matte',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_crayola
+							},
+							{
+								type: 'text',
+								class: 'text text--grey',
+								text: 'Новая коллекция',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_darkblue
+							},
+							{
+								type: 'content',
+								alignment: 'center',
+								name: 'btn',
+								arg: {
+									link: '#',
+									img: '8marth-btn-84-36-01.png',
+									width: 84,
+									height: 36
+								}
+							}
+						]
+					}
+				}
+			})
+	tr
+		td(align="center")
+			//- RTL
+			+row({
+				col: 2,
+				bg_body: bg_body,
+				body_pading_l: body_pading_l,
+				body_pading_r: body_pading_r,
+				body_width: col_body_width,
+				rtl: 'rtl',
+				alignTd: 'center',
+				margin_top: false,
+				margin_top_class: false,
+				margin_bottom: false,
+				content: {
+					colWidth: td_2_col_width,
+					colPadding: '10px 10px',
+					valing_right: 'middle',
+					valing_left: 'middle',
+					col2_left: {
+						name: 'img-wraper',
+						arg: {
+							img: '8marth-img-card-220-220-04.jpg',
+							alt: 'cosmetics',
+							width: '220',
+							height: '220'
+						}
+					},
+					col2_right: {
+						name: 'text',
+						arg: [
+							{
+								type: 'text',
+								class: 'h2',
+								text: 'Jo Malone',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_crayola
+							},
+							{
+								type: 'text',
+								class: 'text text--grey',
+								text: 'Новинка сезона',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_darkblue
+							},
+							{
+								type: 'content',
+								alignment: 'center',
+								name: 'btn',
+								arg: {
+									link: '#',
+									img: '8marth-btn-84-36-01.png',
+									width: 84,
+									height: 36
+								}
+							}
+						]
+					}
+				}
+			})
+	tr
+		td(align="center")
+			//- NORMAL
+			+row({
+				col: 2,
+				bg_body: bg_body,
+				body_pading_l: body_pading_l,
+				body_pading_r: body_pading_r,
+				body_width: col_body_width,
+				rtl: false,
+				margin_top: false,
+				margin_top_class: false,
+				margin_bottom: false,
+				content: {
+					colWidth: td_2_col_width,
+					colPadding: '10px 10px',
+					valing_right: 'middle',
+					valing_left: 'middle',
+					col2_left: {
+						name: 'img-wraper',
+						arg: {
+							img: '8marth-img-card-220-220-05.jpg',
+							alt: 'cosmetics',
+							width: '220',
+							height: '220'
+						}
+					},
+					col2_right: {
+						name: 'text',
+						arg: [
+							{
+								type: 'text',
+								class: 'h2',
+								text: 'Cocooli',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_crayola
+							},
+							{
+								type: 'text',
+								class: 'text text--grey',
+								text: 'Молочко для лица',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_darkblue
+							},
+							{
+								type: 'content',
+								alignment: 'center',
+								name: 'btn',
+								arg: {
+									link: '#',
+									img: '8marth-btn-84-36-01.png',
+									width: 84,
+									height: 36
+								}
+							}
+						]
+					}
+				}
+			})
+	tr
+		td(align="center")
+			//- RTL
+			+row({
+				col: 2,
+				bg_body: bg_body,
+				body_pading_l: body_pading_l,
+				body_pading_r: body_pading_r,
+				body_width: col_body_width,
+				rtl: 'rtl',
+				alignTd: 'center',
+				margin_top: false,
+				margin_top_class: false,
+				margin_bottom: mr_turquoise,
+				content: {
+					colWidth: td_2_col_width,
+					colPadding: '10px 10px',
+					valing_right: 'middle',
+					valing_left: 'middle',
+					col2_left: {
+						name: 'img-wraper',
+						arg: {
+							img: '8marth-img-card-220-220-06.jpg',
+							alt: 'cosmetics',
+							width: '220',
+							height: '220'
+						}
+					},
+					col2_right: {
+						name: 'text',
+						arg: [
+							{
+								type: 'text',
+								class: 'h2',
+								text: 'Marshol',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_crayola
+							},
+							{
+								type: 'text',
+								class: 'text text--grey',
+								text: 'Увлажняющий лосьон',
+								alignment: 'center'
+							},
+							{
+								type: 'margin',
+								margin: mr_darkblue
+							},
+							{
+								type: 'content',
+								alignment: 'center',
+								name: 'btn',
+								arg: {
+									link: '#',
+									img: '8marth-btn-84-36-01.png',
+									width: 84,
+									height: 36
+								}
+							}
+						]
+					}
+				}
+			})

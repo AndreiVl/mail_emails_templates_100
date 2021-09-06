@@ -1,0 +1,71 @@
+mixin brend-list(data)
+	if data.brendList1
+		+row({
+			col: 3,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width_3,
+			rtl: false,
+			margin_top_class: false,
+			margin_bottom: mr_turquoise,
+			content: {
+				colWidth: td_3_col_width,
+				colPadding: '10px 10px',
+				items: [
+					{	valign: 'top',
+						name: 'brend-item',
+						arg: {
+							brendItemImg: 'fashion-img-52-52-clothes.png',
+							brendItemImgAlt: 'clothes',
+							brendItemImgWidth: 52,
+							brendItemImgHeight: 52,
+							brendTitle: 'Clothes',
+							brendDesc: 'dolor sit amet'
+						}
+					},
+					{	valign: 'top',
+						name: 'brend-item',
+						arg: {
+							brendItemImg: 'fashion-img-52-52-shoes.png',
+							brendItemImgAlt: 'shoes',
+							brendItemImgWidth: 52,
+							brendItemImgHeight: 52,
+							brendTitle: 'Shoes',
+							brendDesc: 'dolor sit amet'
+						}
+					},
+					{	valign: 'top',
+						name: 'brend-item',
+						arg: {
+							brendItemImg: 'fashion-img-52-52-accessories.png',
+							brendItemImgAlt: 'acceessories',
+							brendItemImgWidth: 52,
+							brendItemImgHeight: 52,
+							brendTitle: 'Acceessories',
+							brendDesc: 'dolor sit amet'
+						}
+					}
+				]
+			}
+		})
+
+
+mixin brend-item(data)
+	table.table-after-div(align="center" bgcolor=data.block_bg border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			td(align='center' style="line-height: 0px;" width=data.cardItemImgWidth)
+				+img({
+					img_big: data.brendItemImg, 
+					alt: data.brendItemImgAlt,
+					width: data.brendItemImgWidth,
+					height: data.brendItemImgHeight
+				})
+		tr
+			+td-margin({height: mr_purpur})
+		tr
+			<!-- ID:TXT TITLE  -->
+			td.text.text--black(align='center')!=data.brendTitle
+		tr
+			<!-- ID:TXT TEXT  -->
+			td.text.text--esm(align='center')!=data.brendDesc
